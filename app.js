@@ -891,7 +891,8 @@ function setupLearningEventListeners() {
     elements.learningCategoryContainer.addEventListener('click', (e) => {
         if (e.target.tagName !== 'BUTTON') return;
         
-        // 更新active状态        document.querySelectorAll('#learning-category-container .category-tag').forEach(btn => {
+        // 更新active状态
+        document.querySelectorAll('#learning-category-container .category-tag').forEach(btn => {
             btn.classList.remove('active');
         });
         e.target.classList.add('active');

@@ -91,40 +91,48 @@ async function init() {
 async function loadAllData() {
     // 构建数据路径，开发环境和生产环境自适应
     const dataPath = window.location.hostname === 'localhost' 
-        ? '../data/daily.json' 
+        ? './data/daily.json' 
         : './data/daily.json';
     
-    const response = await fetch(dataPath);
-    if (!response.ok) {
-        throw new Error(`HTTP error, status = ${response.status}`);
-    }
-    const data = await response.json();
+    console.log('Loading data from:', dataPath);
     
-    // 热点数据
-    AppState.hotData = data;
-    AppState.allHotItems = data.items || [];
-    AppState.filteredHotItems = [...AppState.allHotItems];
-    
-    // AI学习数据（兼容旧数据，如果没有则为空）
-    if (data.learning && data.learning.items) {
-        AppState.learningData = data.learning;
-        AppState.allLearningVideos = data.learning.items || [];
-        AppState.filteredLearningVideos = [...AppState.allLearningVideos];
-    } else {
-        AppState.learningData = { total_count: 0, categories: [], items: [] };
-        AppState.allLearningVideos = [];
-        AppState.filteredLearningVideos = [];
-    }
-    
-    // 更新界面信息
-    elements.dateDisplay.textContent = `今日 ${data.date} · ${data.total_count} 条热点`;
-    
-    // 处理路由
-    const hash = window.location.hash || '#/';
-    if (hash === '#/learning') {
-        AppState.currentRoute = 'learning';
-    } else {
-        AppState.currentRoute = 'hot';
+    try {
+        const response = await fetch(dataPath);
+        if (!response.ok) {
+            throw new Error(`HTTP error, status = ${response.status}`);
+        }
+        const data = await response.json();
+        console.log('Data loaded successfully:', data);
+        
+        // 热点数据
+        AppState.hotData = data;
+        AppState.allHotItems = data.items || [];
+        AppState.filteredHotItems = [...AppState.allHotItems];
+        
+        // AI学习数据（兼容旧数据，如果没有则为空）
+        if (data.learning && data.learning.items) {
+            AppState.learningData = data.learning;
+            AppState.allLearningVideos = data.learning.items || [];
+            AppState.filteredLearningVideos = [...AppState.allLearningVideos];
+        } else {
+            AppState.learningData = { total_count: 0, categories: [], items: [] };
+            AppState.allLearningVideos = [];
+            AppState.filteredLearningVideos = [];
+        }
+        
+        // 更新界面信息
+        elements.dateDisplay.textContent = `今日 ${data.date} · ${data.total_count} 条热点`;
+        
+        // 处理路由
+        const hash = window.location.hash || '#/';
+        if (hash === '#/learning') {
+            AppState.currentRoute = 'learning';
+        } else {
+            AppState.currentRoute = 'hot';
+        }
+    } catch (err) {
+        console.error('Failed to load data:', err);
+        throw err;
     }
 }
 

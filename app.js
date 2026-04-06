@@ -177,10 +177,15 @@ function setupRouting() {
             } else {
                 elements.hotView.classList.add('hidden');
                 elements.learningView.classList.remove('hidden');
-                if (AppState.learningData.items.length > 0 && elements.videoGrid.children.length === 0) {
+                // 第一次进入学习页面才初始化，保证只渲染一次
+                if (AppState.allLearningVideos.length > 0 && elements.videoGrid.children.length === 0) {
+                    console.log('initLearningView first time');
                     initLearningView();
                 }
             }
+            // 强制隐藏loading
+            elements.loading.classList.add('hidden');
+            elements.learningLoading.classList.add('hidden');
         });
     });
     
@@ -503,6 +508,8 @@ function reRenderHot() {
     filterHotItems();
     elements.hotGrid.innerHTML = '';
     
+    console.log('reRenderHot: filteredHotItems length =', AppState.filteredHotItems.length);
+    
     if (AppState.filteredHotItems.length === 0) {
         elements.hotGrid.classList.add('hidden');
         elements.noResults.classList.remove('hidden');
@@ -515,6 +522,10 @@ function reRenderHot() {
     }
     
     updateHotFilterInfo();
+    // 强制隐藏loading
+    setTimeout(() => {
+        elements.loading.classList.add('hidden');
+    }, 500);
 }
 
 /**

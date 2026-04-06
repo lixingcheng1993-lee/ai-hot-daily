@@ -1,0 +1,14 @@
+
+{
+  "name": "ai-hot-daily",
+  "version": "1.0.0",
+  "description": "Daily AI hotspots aggregation website",
+  "main": "index.html",
+  "scripts": {
+    "dev": "cd frontend && python3 -m http.server 8000",
+    "crawl": "python3 crawler/main.py"
+  },
+  "keywords": ["ai", "daily", "hotspots"],
+  "author": "",
+  "license": "MIT"
+}

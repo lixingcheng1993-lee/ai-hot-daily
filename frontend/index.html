@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI热点日报 - 每日更新AI领域热点</title>
+    <meta name="description" content="每日聚合AI领域热点事件，论文、项目、讨论一网打尽">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --secondary: #8b5cf6;
+            --bg: #f8fafc;
+            --card: #ffffff;
+        }
+        * {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+        body {
+            background-color: var(--bg);
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+        }
+        .hot-card {
+            transition: all 0.2s ease;
+            border: 1px solid #e2e8f0;
+        }
+        .hot-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+            border-color: var(--primary);
+        }
+        .hot-score {
+            background: linear-gradient(135deg, #f59e0b, #ef4444);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .category-tag {
+            transition: all 0.15s ease;
+        }
+        .category-tag:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+        .category-tag.active {
+            background-color: var(--primary);
+            color: white;
+        }
+        .skeleton {
+            background: linear-gradient(90deg, #f0f0f0 25%, #f8f8f8 50%, #f0f0f0 75%);
+            background-size: 200% 100%;
+            animation: skeleton-loading 1.5s infinite;
+        }
+        @keyframes skeleton-loading {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+        .fade-in {
+            animation: fadeIn 0.3s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="gradient-bg text-white sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                <div>
+                    <h1 class="text-2xl md:text-3xl font-bold">🔥 AI热点日报</h1>
+                    <p class="text-blue-100 text-sm md:text-base mt-1" id="date-display">加载中...</p>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-2">
+                    <input 
+                        type="search" 
+                        id="search-input" 
+                        placeholder="搜索热点..." 
+                        class="px-4 py-2 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-300 w-full sm:w-64"
+                    >
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Category Filter -->
+    <section class="bg-white shadow-sm border-b">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex flex-wrap gap-2" id="category-container">
+                <!-- 动态加载分类 -->
+                <button class="category-tag active px-3 py-1 rounded-full text-sm bg-gray-100" data-category="all">全部</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-6">
+        <!-- Stats Bar -->
+        <div class="mb-6 text-gray-600 text-sm flex flex-wrap items-center justify-between">
+            <div>共 <span id="total-count" class="font-semibold text-primary">0</span> 条热点</div>
+            <div id="filter-info"></div>
+        </div>
+
+        <!-- Hot Card Grid -->
+        <div id="hot-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- 动态加载内容 -->
+        </div>
+
+        <!-- Load More / Loading -->
+        <div id="loading" class="text-center py-10 hidden">
+            <div class="inline-block w-8 h-8 border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin"></div>
+            <p class="text-gray-500 mt-2">加载更多...</p>
+        </div>
+
+        <div id="end-message" class="text-center py-10 text-gray-400 hidden">
+            <p>已经到底啦 🎉 明天再来看看新热点吧</p>
+        </div>
+
+        <!-- No Results -->
+        <div id="no-results" class="text-center py-20 text-gray-400 hidden">
+            <p class="text-xl">没有找到匹配的热点 😕</p>
+            <p class="mt-2">试试换个关键词或分类吧</p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 border-t mt-10">
+        <div class="container mx-auto px-4 py-6 text-center text-gray-500 text-sm">
+            <p>AI热点日报 · 每日自动更新 · 聚合多源AI热点</p>
+            <p class="mt-2">数据来源于 GitHub Trending、HuggingFace Papers、知乎热榜</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

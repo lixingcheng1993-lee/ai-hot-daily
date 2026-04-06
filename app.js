@@ -79,9 +79,14 @@ async function init() {
             initLearningView();
         }
         setupLazyLoading();
+        // 无论如何，最终隐藏loading
+        setTimeout(() => {
+            elements.loading.classList.add('hidden');
+        }, 1000);
     } catch (error) {
         console.error('初始化失败:', error);
-        showError('数据加载失败，请刷新重试');
+        elements.loading.classList.add('hidden');
+        showError('数据加载失败：' + error.message);
     }
 }
 

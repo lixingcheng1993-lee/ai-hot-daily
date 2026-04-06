@@ -94,10 +94,8 @@ async function init() {
  * 加载所有数据
  */
 async function loadAllData() {
-    // 构建数据路径，开发环境和生产环境自适应
-    const dataPath = window.location.hostname === 'localhost' 
-        ? './data/daily.json' 
-        : './data/daily.json';
+    // 构建数据路径，绝对路径确保正确
+    const dataPath = window.location.origin + '/data/daily.json';
     
     console.log('Loading data from:', dataPath);
     

@@ -94,8 +94,14 @@ async function init() {
  * 加载所有数据
  */
 async function loadAllData() {
-    // 构建数据路径，绝对路径确保正确
-    const dataPath = window.location.origin + '/data/daily.json';
+    // 构建数据路径，多种方式 fallback 保证能加载到
+    let dataPath;
+    if (window.location.hostname === 'localhost') {
+        dataPath = './data/daily.json';
+    } else {
+        // 生产环境用绝对路径确保正确
+        dataPath = window.location.origin + '/data/daily.json';
+    }
     
     console.log('Loading data from:', dataPath);
     
@@ -135,7 +141,38 @@ async function loadAllData() {
         }
     } catch (err) {
         console.error('Failed to load data:', err);
-        throw err;
+        // 尝试 fallback 相对路径
+        try {
+            console.log('Trying fallback path ./data/daily.json');
+            const response = await fetch('./data/daily.json');
+            if (!response.ok) {
+                throw new Error(`Fallback also failed: HTTP ${response.status}`);
+            }
+            const data = await response.json();
+            console.log('Fallback loaded successfully:', data);
+            
+            // 热点数据
+            AppState.hotData = data;
+            AppState.allHotItems = data.items || [];
+            AppState.filteredHotItems = [...AppState.allHotItems];
+            
+            // AI学习数据
+            if (data.learning && data.learning.items) {
+                AppState.learningData = data.learning;
+                AppState.allLearningVideos = data.learning.items || [];
+                AppState.filteredLearningVideos = [...AppState.allLearningVideos];
+            } else {
+                AppState.learningData = { total_count: 0, categories: [], items: [] };
+                AppState.allLearningVideos = [];
+                AppState.filteredLearningVideos = [];
+            }
+            
+            // 更新界面信息
+            elements.dateDisplay.textContent = `今日 ${data.date} · ${data.total_count} 条热点`;
+        } catch (fallbackErr) {
+            console.error('Both paths failed:', fallbackErr);
+            throw fallbackErr;
+        }
     }
 }
 

@@ -15,6 +15,7 @@
             --secondary: #8b5cf6;
             --bg: #f8fafc;
             --card: #ffffff;
+            --sidebar-bg: #f1f5f9;
         }
         * {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -34,6 +35,15 @@
             box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
             border-color: var(--primary);
         }
+        .focus-card {
+            transition: all 0.3s ease;
+            border: 2px solid #e2e8f0;
+        }
+        .focus-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 35px -10px rgba(37, 99, 235, 0.3);
+            border-color: var(--primary);
+        }
         .hot-score {
             background: linear-gradient(135deg, #f59e0b, #ef4444);
             -webkit-background-clip: text;
@@ -51,6 +61,14 @@
             background-color: var(--primary);
             color: white;
         }
+        .tag-cloud a {
+            transition: all 0.2s ease;
+        }
+        .tag-cloud a:hover {
+            background-color: var(--primary);
+            color: white;
+            transform: scale(1.05);
+        }
         .skeleton {
             background: linear-gradient(90deg, #f0f0f0 25%, #f8f8f8 50%, #f0f0f0 75%);
             background-size: 200% 100%;
@@ -67,6 +85,43 @@
             from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
         }
+        .quick-read-item {
+            transition: all 0.15s ease;
+            border-bottom: 1px solid #f1f5f9;
+        }
+        .quick-read-item:hover {
+            background-color: #f8fafc;
+            padding-left: 8px;
+        }
+        .nav-tab {
+            transition: all 0.2s ease;
+        }
+        .nav-tab:hover {
+            color: white;
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        .nav-tab.active {
+            background-color: rgba(255, 255, 255, 0.25);
+            font-weight: 600;
+        }
+        /* 图片懒加载动画 */
+        img {
+            transition: opacity 0.3s ease;
+        }
+        img.lazy {
+            opacity: 0;
+        }
+        img.lazy.loaded {
+            opacity: 1;
+        }
+        .play-overlay {
+            transition: all 0.2s ease;
+            opacity: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .video-card:hover .play-overlay {
+            opacity: 1;
+        }
     </style>
 </head>
 <body>
@@ -75,14 +130,20 @@
         <div class="container mx-auto px-4 py-4">
             <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
                 <div>
-                    <h1 class="text-2xl md:text-3xl font-bold">🔥 AI热点日报</h1>
+                    <div class="flex items-center gap-4">
+                        <h1 class="text-2xl md:text-3xl font-bold">AI热点日报</h1>
+                        <div class="flex bg-white/15 rounded-lg p-1">
+                            <button class="nav-tab active px-3 py-1 rounded-md text-sm" data-route="hot">🔥 热点</button>
+                            <button class="nav-tab px-3 py-1 rounded-md text-sm" data-route="learning">📚 AI学习</button>
+                        </div>
+                    </div>
                     <p class="text-blue-100 text-sm md:text-base mt-1" id="date-display">加载中...</p>
                 </div>
                 <div class="flex flex-col sm:flex-row gap-2">
                     <input 
                         type="search" 
                         id="search-input" 
-                        placeholder="搜索热点..." 
+                        placeholder="搜索..." 
                         class="px-4 py-2 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-300 w-full sm:w-64"
                     >
                 </div>
@@ -90,51 +151,150 @@
         </div>
     </header>
 
-    <!-- Category Filter -->
-    <section class="bg-white shadow-sm border-b">
-        <div class="container mx-auto px-4 py-3">
-            <div class="flex flex-wrap gap-2" id="category-container">
-                <!-- 动态加载分类 -->
-                <button class="category-tag active px-3 py-1 rounded-full text-sm bg-gray-100" data-category="all">全部</button>
+    <!-- 热点日报路由视图 -->
+    <div id="hot-view">
+        <!-- Category Filter & Sort -->
+        <section class="bg-white shadow-sm border-b">
+            <div class="container mx-auto px-4 py-3">
+                <div class="flex flex-wrap items-center justify-between gap-2">
+                    <div class="flex flex-wrap gap-2" id="category-container">
+                        <!-- 动态加载分类 -->
+                        <button class="category-tag active px-3 py-1 rounded-full text-sm bg-gray-100" data-category="all">全部</button>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <select id="sort-select" class="px-3 py-1 rounded-lg border text-sm bg-white">
+                            <option value="hot">按热度排序</option>
+                            <option value="time">按时间排序</option>
+                        </select>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Main Content -->
-    <main class="container mx-auto px-4 py-6">
-        <!-- Stats Bar -->
-        <div class="mb-6 text-gray-600 text-sm flex flex-wrap items-center justify-between">
-            <div>共 <span id="total-count" class="font-semibold text-primary">0</span> 条热点</div>
-            <div id="filter-info"></div>
-        </div>
+        <!-- Main Content with Sidebar -->
+        <main class="container mx-auto px-4 py-6">
+            <div class="flex flex-col lg:flex-row gap-6">
+                <!-- Sidebar: Tag Cloud -->
+                <aside class="lg:w-64 lg:flex-shrink-0">
+                    <div class="bg-white rounded-xl p-4 shadow-sm border sticky top-24">
+                        <h3 class="font-semibold text-gray-800 mb-3 flex items-center gap-2">
+                            🔖 热门标签
+                        </h3>
+                        <div id="tag-cloud" class="tag-cloud flex flex-wrap gap-2">
+                            <!-- 动态加载标签云 -->
+                        </div>
+                    </div>
+                </aside>
 
-        <!-- Hot Card Grid -->
-        <div id="hot-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- 动态加载内容 -->
-        </div>
+                <!-- Main Content Area -->
+                <div class="lg:flex-1">
+                    <!-- 🔥 今日焦点 -->
+                    <section id="today-focus" class="mb-8">
+                        <h2 class="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
+                            🔥 今日焦点
+                        </h2>
+                        <div id="focus-container" class="grid grid-cols-1 gap-4">
+                            <!-- 动态加载今日焦点 -->
+                        </div>
+                    </section>
 
-        <!-- Load More / Loading -->
-        <div id="loading" class="text-center py-10 hidden">
-            <div class="inline-block w-8 h-8 border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin"></div>
-            <p class="text-gray-500 mt-2">加载更多...</p>
-        </div>
+                    <!-- ⚡ 今日速读 -->
+                    <section id="quick-read" class="mb-8">
+                        <div class="flex items-center justify-between mb-4 cursor-pointer" id="quick-read-header">
+                            <h2 class="text-xl font-bold text-gray-800 flex items-center gap-2">
+                                ⚡ 今日速读
+                                <span class="text-sm font-normal text-gray-500" id="quick-read-count"></span>
+                            </h2>
+                            <svg id="quick-read-icon" class="w-5 h-5 text-gray-400 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </div>
+                        <div id="quick-read-content" class="bg-white rounded-xl shadow-sm border overflow-hidden">
+                            <div id="quick-read-list" class="divide-y">
+                                <!-- 动态加载速读列表 -->
+                            </div>
+                        </div>
+                    </section>
 
-        <div id="end-message" class="text-center py-10 text-gray-400 hidden">
-            <p>已经到底啦 🎉 明天再来看看新热点吧</p>
-        </div>
+                    <!-- Stats Bar -->
+                    <div class="mb-4 text-gray-600 text-sm flex flex-wrap items-center justify-between">
+                        <div>📋 热点列表</div>
+                        <div id="filter-info"></div>
+                    </div>
 
-        <!-- No Results -->
-        <div id="no-results" class="text-center py-20 text-gray-400 hidden">
-            <p class="text-xl">没有找到匹配的热点 😕</p>
-            <p class="mt-2">试试换个关键词或分类吧</p>
-        </div>
-    </main>
+                    <!-- Hot Card Grid -->
+                    <div id="hot-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- 动态加载内容 -->
+                    </div>
+
+                    <!-- Load More / Loading -->
+                    <div id="loading" class="text-center py-10 hidden">
+                        <div class="inline-block w-8 h-8 border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin"></div>
+                        <p class="text-gray-500 mt-2">加载更多...</p>
+                    </div>
+
+                    <div id="end-message" class="text-center py-10 text-gray-400 hidden">
+                        <p>已经到底啦 🎉 明天再来看看新热点吧</p>
+                    </div>
+
+                    <!-- No Results -->
+                    <div id="no-results" class="text-center py-20 text-gray-400 hidden">
+                        <p class="text-xl">没有找到匹配的热点 😕</p>
+                        <p class="mt-2">试试换个关键词或分类吧</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- 📚 AI学习板块视图 -->
+    <div id="learning-view" class="hidden">
+        <!-- Category Filter -->
+        <section class="bg-white shadow-sm border-b">
+            <div class="container mx-auto px-4 py-3">
+                <div class="flex flex-wrap gap-2" id="learning-category-container">
+                    <button class="category-tag active px-3 py-1 rounded-full text-sm bg-gray-100" data-category="all">全部</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <main class="container mx-auto px-4 py-6">
+            <!-- Stats Bar -->
+            <div class="mb-6 text-gray-600 text-sm flex flex-wrap items-center justify-between">
+                <div>共 <span id="learning-total-count" class="font-semibold text-primary">0</span> 个AI学习视频</div>
+                <div id="learning-filter-info"></div>
+            </div>
+
+            <!-- Video Card Grid -->
+            <div id="video-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- 动态加载视频卡片 -->
+            </div>
+
+            <!-- Load More -->
+            <div id="learning-loading" class="text-center py-10 hidden">
+                <div class="inline-block w-8 h-8 border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin"></div>
+                <p class="text-gray-500 mt-2">加载更多...</p>
+            </div>
+
+            <div id="learning-end-message" class="text-center py-10 text-gray-400 hidden">
+                <p>已经到底啦 🎉 明天再来学习吧</p>
+            </div>
+
+            <!-- No Results -->
+            <div id="learning-no-results" class="text-center py-20 text-gray-400 hidden">
+                <p class="text-xl">没有找到匹配的视频 😕</p>
+                <p class="mt-2">试试换个分类吧</p>
+            </div>
+        </main>
+    </div>
 
     <!-- Footer -->
     <footer class="bg-gray-100 border-t mt-10">
         <div class="container mx-auto px-4 py-6 text-center text-gray-500 text-sm">
-            <p>AI热点日报 · 每日自动更新 · 聚合多源AI热点</p>
-            <p class="mt-2">数据来源于 GitHub Trending、HuggingFace Papers、知乎热榜</p>
+            <p>AI热点日报 · 每日自动更新 · 聚合多源AI热点与教程</p>
+            <p class="mt-2">热点数据来源于 GitHub Trending、HuggingFace Papers、知乎、掘金</p>
+            <p class="mt-1">AI学习内容来源于B站，点击跳转原视频播放</p>
         </div>
     </footer>
 

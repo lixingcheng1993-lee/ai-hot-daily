@@ -1,90 +1,91 @@
 {
-  "date": "2026-04-06",
-  "generated_at": "2026-04-06T22:55:04.200912",
+  "date": "2026-04-07",
+  "generated_at": "2026-04-07T01:08:47.568711",
   "total_count": 36,
   "categories": [
     "AI工具",
     "大语言模型",
     "论文"
   ],
+  "trending_tags": [],
   "items": [
     {
       "title": "ollama/ollama",
       "url": "https://github.com/ollama/ollama",
       "description": "Get up and running with Kimi-K2.5, GLM-5, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models.",
-      "likes": 167493,
-      "forks": 15373,
+      "likes": 167544,
+      "forks": 15379,
       "language": "Go",
       "source": "GitHub Trending",
       "category": "大语言模型",
       "created_at": null,
       "author": "ollama",
-      "hot_score": 167493.0
+      "hot_score": 167544.0
     },
     {
       "title": "ggml-org/llama.cpp",
       "url": "https://github.com/ggml-org/llama.cpp",
       "description": "LLM inference in C/C++",
-      "likes": 101825,
-      "forks": 16437,
+      "likes": 101888,
+      "forks": 16445,
       "language": "C++",
       "source": "GitHub Trending",
       "category": "大语言模型",
       "created_at": null,
       "author": "ggml-org",
-      "hot_score": 101825.0
+      "hot_score": 101888.0
     },
     {
       "title": "block/goose",
       "url": "https://github.com/block/goose",
       "description": "an open source, extensible AI agent that goes beyond code suggestions - install, execute, edit, and test with any LLM",
-      "likes": 37747,
-      "forks": 3639,
+      "likes": 37857,
+      "forks": 3650,
       "language": "Rust",
       "source": "GitHub Trending",
       "category": "大语言模型",
       "created_at": null,
       "author": "block",
-      "hot_score": 37747.0
+      "hot_score": 37857.0
     },
     {
       "title": "KeygraphHQ/shannon",
       "url": "https://github.com/KeygraphHQ/shannon",
       "description": "Shannon Lite is an autonomous, white-box AI pentester for web applications and APIs. It analyzes your source code, identifies attack vectors, and executes real exploits to prove vulnerabilities before they reach production.",
-      "likes": 36168,
-      "forks": 3780,
+      "likes": 36270,
+      "forks": 3797,
       "language": "TypeScript",
       "source": "GitHub Trending",
       "category": "AI工具",
       "created_at": null,
       "author": "KeygraphHQ",
-      "hot_score": 36168.0
+      "hot_score": 36270.0
     },
     {
       "title": "google-ai-edge/gallery",
       "url": "https://github.com/google-ai-edge/gallery",
       "description": "A gallery that showcases on-device ML/GenAI use cases and allows people to try and use models locally.",
-      "likes": 17608,
-      "forks": 1625,
+      "likes": 17682,
+      "forks": 1635,
       "language": "Kotlin",
       "source": "GitHub Trending",
       "category": "AI工具",
       "created_at": null,
       "author": "google-ai-edge",
-      "hot_score": 17608.0
+      "hot_score": 17682.0
     },
     {
       "title": "google-ai-edge/LiteRT-LM",
       "url": "https://github.com/google-ai-edge/LiteRT-LM",
       "description": "",
-      "likes": 1850,
+      "likes": 1897,
       "forks": 205,
       "language": "C++",
       "source": "GitHub Trending",
       "category": "AI工具",
       "created_at": null,
       "author": "google-ai-edge",
-      "hot_score": 1850.0
+      "hot_score": 1897.0
     },
     {
       "title": "Self-Distilled RLVR",
@@ -96,7 +97,7 @@
       "category": "论文",
       "created_at": "2026-04-03T00:00:00.000Z",
       "author": "Chenxu Yang, Chuanyu Qin, Qingyi Si, Minghui Chen, Naibin Gu, Dingyu Yao, Zheng Lin, Weiping Wang, Jiaqi Wang, Nan Duan",
-      "hot_score": 0.49
+      "hot_score": 0.46
     },
     {
       "title": "Token Warping Helps MLLMs Look from Nearby Viewpoints",
@@ -108,7 +109,7 @@
       "category": "论文",
       "created_at": "2026-04-03T00:00:00.000Z",
       "author": "Phillip Y. Lee, Chanho Park, Mingue Park, Seungwoo Yoo, Juil Koo, Minhyuk Sung",
-      "hot_score": 0.32
+      "hot_score": 0.3
     },
     {
       "title": "A Simple Baseline for Streaming Video Understanding",
@@ -120,7 +121,7 @@
       "category": "论文",
       "created_at": "2026-04-02T00:00:00.000Z",
       "author": "Yujiao Shen, Shulin Tian, Jingkang Yang, Ziwei Liu",
-      "hot_score": 0.32
+      "hot_score": 0.3
     },
     {
       "title": "Therefore I am. I Think",
@@ -132,19 +133,19 @@
       "category": "论文",
       "created_at": "2026-04-02T00:00:00.000Z",
       "author": "Esakkivel Esakkiraja, Sai Rajeswar, Denis Akhiyarov, Rajagopal Venkatesaramani",
-      "hot_score": 0.24
+      "hot_score": 0.23
     },
     {
-      "title": "Steerable Visual Representations",
-      "url": "https://huggingface.co/papers/2604.02327",
-      "description": "Pretrained Vision Transformers (ViTs) such as DINOv2 and MAE provide generic image features that can be applied to a variety of downstream tasks such as retrieval, classification, and segmentation. However, such representations tend to focus on the most salient visual cues in the image, with no way to direct them toward less prominent concepts of interest. In contrast, Multimodal LLMs can be guided with textual prompts, but the resulting representations tend to be language-centric and lose their effectiveness for generic visual tasks. To address this, we introduce Steerable Visual Representations, a new class of visual representations, whose global and local features can be steered with natural language. While most vision-language models (e.g., CLIP) fuse text with visual features after encoding (late fusion), we inject text directly into the layers of the visual encoder (early fusion) via lightweight cross-attention. We introduce benchmarks for measuring representational steerability, and demonstrate that our steerable visual features can focus on any desired objects in an image while preserving the underlying representation quality. Our method also matches or outperforms dedicated approaches on anomaly detection and personalized object discrimination, exhibiting zero-shot generalization to out-of-distribution tasks.",
+      "title": "Salt: Self-Consistent Distribution Matching with Cache-Aware Training for Fast Video Generation",
+      "url": "https://huggingface.co/papers/2604.03118",
+      "description": "Distilling video generation models to extremely low inference budgets (e.g., 2--4 NFEs) is crucial for real-time deployment, yet remains challenging. Trajectory-style consistency distillation often becomes conservative under complex video dynamics, yielding an over-smoothed appearance and weak motion. Distribution matching distillation (DMD) can recover sharp, mode-seeking samples, but its local training signals do not explicitly regularize how denoising updates compose across timesteps, making composed rollouts prone to drift. To overcome this challenge, we propose Self-Consistent Distribution Matching Distillation (SC-DMD), which explicitly regularizes the endpoint-consistent composition of consecutive denoising updates. For real-time autoregressive video generation, we further treat the KV cache as a quality parameterized condition and propose Cache-Distribution-Aware training. This training scheme applies SC-DMD over multi-step rollouts and introduces a cache-conditioned feature alignment objective that steers low-quality outputs toward high-quality references. Across extensive experiments on both non-autoregressive backbones (e.g., Wan~2.1) and autoregressive real-time paradigms (e.g., Self Forcing), our method, dubbed Salt, consistently improves low-NFE video generation quality while remaining compatible with diverse KV-cache memory mechanisms. Source code will be released at https://github.com/XingtongGe/Salt{https://github.com/XingtongGe/Salt}.",
       "likes": 0,
-      "comments": 3,
+      "comments": 1,
       "source": "HuggingFace Papers",
       "category": "论文",
-      "created_at": "2026-04-02T00:00:00.000Z",
-      "author": "Jona Ruthardt, Manu Gaur, Deva Ramanan, Makarand Tapaswi, Yuki M. Asano",
-      "hot_score": 0.24
+      "created_at": "2026-04-03T00:00:00.000Z",
+      "author": "Xingtong Ge, Yi Zhang, Yushi Huang, Dailan He, Xiahong Wang, Bingqi Ma, Guanglu Song, Yu Liu, Jun Zhang",
+      "hot_score": 0.15
     },
     {
       "title": "Agentic-MME: What Agentic Capability Really Brings to Multimodal Intelligence?",
@@ -156,7 +157,7 @@
       "category": "论文",
       "created_at": "2026-04-03T00:00:00.000Z",
       "author": "Qianshan Wei, Yishan Yang, Siyi Wang, Jinglin Chen, Binyu Wang, Jiaming Wang, Shuang Chen, Zechen Li, Yang Shi, Yuqi Tang, Weining Wang, Yi Yu, Chaoyou Fu, Qi Li, Yi-Fan Zhang",
-      "hot_score": 0.16
+      "hot_score": 0.15
     },
     {
       "title": "CORAL: Towards Autonomous Multi-Agent Evolution for Open-Ended Discovery",
@@ -168,7 +169,7 @@
       "category": "论文",
       "created_at": "2026-04-02T00:00:00.000Z",
       "author": "Ao Qu, Han Zheng, Zijian Zhou, Yihao Yan, Yihong Tang, Shao Yong Ong, Fenglu Hong, Kaichen Zhou, Chonghe Jiang, Minwei Kong, Jiacheng Zhu, Xuan Jiang, Sirui Li, Cathy Wu, Bryan Kian Hsiang Low, Jinhua Zhao, Paul Pu Liang",
-      "hot_score": 0.16
+      "hot_score": 0.15
     },
     {
       "title": "NearID: Identity Representation Learning via Near-identity Distractors",
@@ -180,7 +181,7 @@
       "category": "论文",
       "created_at": "2026-04-02T00:00:00.000Z",
       "author": "Aleksandar Cvejic, Rameen Abdal, Abdelrahman Eldesokey, Bernard Ghanem, Peter Wonka",
-      "hot_score": 0.16
+      "hot_score": 0.15
     },
     {
       "title": "ActionParty: Multi-Subject Action Binding in Generative Video Games",
@@ -192,31 +193,19 @@
       "category": "论文",
       "created_at": "2026-04-02T00:00:00.000Z",
       "author": "Alexander Pondaven, Ziyi Wu, Igor Gilitschenski, Philip Torr, Sergey Tulyakov, Fabio Pizzati, Aliaksandr Siarohin",
-      "hot_score": 0.16
+      "hot_score": 0.15
     },
     {
-      "title": "Tex3D: Objects as Attack Surfaces via Adversarial 3D Textures for Vision-Language-Action Models",
-      "url": "https://huggingface.co/papers/2604.01618",
-      "description": "Vision-language-action (VLA) models have shown strong performance in robotic manipulation, yet their robustness to physically realizable adversarial attacks remains underexplored. Existing studies reveal vulnerabilities through language perturbations and 2D visual attacks, but these attack surfaces are either less representative of real deployment or limited in physical realism. In contrast, adversarial 3D textures pose a more physically plausible and damaging threat, as they are naturally attached to manipulated objects and are easier to deploy in physical environments. Bringing adversarial 3D textures to VLA systems is nevertheless nontrivial. A central obstacle is that standard 3D simulators do not provide a differentiable optimization path from the VLA objective function back to object appearance, making it difficult to optimize through an end-to-end manner. To address this, we introduce Foreground-Background Decoupling (FBD), which enables differentiable texture optimization through dual-renderer alignment while preserving the original simulation environment. To further ensure that the attack remains effective across long-horizon and diverse viewpoints in the physical world, we propose Trajectory-Aware Adversarial Optimization (TAAO), which prioritizes behaviorally critical frames and stabilizes optimization with a vertex-based parameterization. Built on these designs, we present Tex3D, the first framework for end-to-end optimization of 3D adversarial textures directly within the VLA simulation environment. Experiments in both simulation and real-robot settings show that Tex3D significantly degrades VLA performance across multiple manipulation tasks, achieving task failure rates of up to 96.7\\%. Our empirical results expose critical vulnerabilities of VLA systems to physically grounded 3D adversarial attacks and highlight the need for robustness-aware training.",
+      "title": "Swift-SVD: Theoretical Optimality Meets Practical Efficiency in Low-Rank LLM Compression",
+      "url": "https://huggingface.co/papers/2604.01609",
+      "description": "The deployment of Large Language Models is constrained by the memory and bandwidth demands of static weights and dynamic Key-Value cache. SVD-based compression provides a hardware-friendly solution to reduce these costs. However, existing methods suffer from two key limitations: some are suboptimal in reconstruction error, while others are theoretically optimal but practically inefficient. In this paper, we propose Swift-SVD, an activation-aware, closed-form compression framework that simultaneously guarantees theoretical optimum, practical efficiency and numerical stability. Swift-SVD incrementally aggregates covariance of output activations given a batch of inputs and performs a single eigenvalue decomposition after aggregation, enabling training-free, fast, and optimal layer-wise low-rank approximation. We employ effective rank to analyze local layer-wise compressibility and design a dynamic rank allocation strategy that jointly accounts for local reconstruction loss and end-to-end layer importance. Extensive experiments across six LLMs and eight datasets demonstrate that Swift-SVD outperforms state-of-the-art baselines, achieving optimal compression accuracy while delivering 3-70X speedups in end-to-end compression time. Our code will be released upon acceptance.",
       "likes": 0,
-      "comments": 2,
+      "comments": 1,
       "source": "HuggingFace Papers",
       "category": "论文",
       "created_at": "2026-04-02T00:00:00.000Z",
-      "author": "Jiawei Chen, Simin Huang, Jiawei Du, Shuaihang Chen, Yu Tian, Mingjie Wei, Chao Yu, Zhaoxia Yin",
-      "hot_score": 0.16
-    },
-    {
-      "title": "Brainstacks: Cross-Domain Cognitive Capabilities via Frozen MoE-LoRA Stacks for Continual LLM Learning",
-      "url": "https://huggingface.co/papers/2604.01152",
-      "description": "We present Brainstacks, a modular architecture for continual multi-domain fine-tuning of large language models that packages domain expertise as frozen adapter stacks composing additively on a shared frozen base at inference. Five interlocking components: (1) MoE-LoRA with Shazeer-style noisy top-2 routing across all seven transformer projections under QLoRA 4-bit quantization with rsLoRA scaling; (2) an inner loop performing residual boosting by freezing trained stacks and adding new ones; (3) an outer loop training sequential domain-specific stacks with curriculum-ordered dependencies; (4) null-space projection via randomized SVD constraining new stacks to subspaces orthogonal to prior directions, achieving zero forgetting in isolation; (5) an outcome-based sigmoid meta-router trained on empirically discovered domain-combination targets that selectively weights stacks, enabling cross-domain composition. Two boundary experiments: (6) PSN pretraining on a randomly initialized model; (7) per-domain RL (DPO/GRPO) validating compatibility with post-SFT alignment. Validated on TinyLlama-1.1B (4 domains, 9 stacks) and Gemma 3 12B IT (5 domains, 10 stacks), MoE-LoRA achieves 2.5x faster convergence than parameter-matched single LoRA, residual boosting breaks through the single-stack ceiling, and the routed system recovers generation quality destroyed by ungated stack accumulation. The central finding: the outcome-based router discovers that domain stacks encode transferable cognitive primitives (instruction-following clarity, numerical reasoning, procedural logic, chain-of-thought structure) rather than domain-specific knowledge, with medical prompts routing to chat+math stacks in 97% of cases despite zero medical data in those stacks.",
-      "likes": 0,
-      "comments": 2,
-      "source": "HuggingFace Papers",
-      "category": "论文",
-      "created_at": "2026-04-01T17:08:25.000Z",
-      "author": "Mohammad R. Abu Ayyash",
-      "hot_score": 0.13
+      "author": "Ruoling Qi, Yirui Liu, Xuaner Wu, Xiangyu Wang, Ming Li, Chen Chen, Jian Chen, Yin Chen, Qizhen Weng",
+      "hot_score": 0.08
     },
     {
       "title": "Signals: Trajectory Sampling and Triage for Agentic Interactions",
@@ -253,6 +242,18 @@
       "created_at": "2026-04-01T00:00:00.000Z",
       "author": "Zhongwei Yu, Rasul Tutunov, Alexandre Max Maraval, Zikai Xie, Zhenzhi Tan, Jiankang Wang, Zijing Li, Liangliang Xu, Qi Yang, Jun Jiang, Sanzhong Luo, Zhenxiao Guo, Haitham Bou-Ammar, Jun Wang",
       "hot_score": 0.08
+    },
+    {
+      "title": "Test-Time Scaling Makes Overtraining Compute-Optimal",
+      "url": "https://huggingface.co/papers/2604.01411",
+      "description": "Modern LLMs scale at test-time, e.g. via repeated sampling, where inference cost grows with model size and the number of samples. This creates a trade-off that pretraining scaling laws, such as Chinchilla, do not address. We present Train-to-Test (T^2) scaling laws that jointly optimize model size, training tokens, and number of inference samples under fixed end-to-end budgets. T^2 modernizes pretraining scaling laws with pass@k modeling used for test-time scaling, then jointly optimizes pretraining and test-time decisions. Forecasts from T^2 are robust over distinct modeling approaches: measuring joint scaling effect on the task loss and modeling impact on task accuracy. Across eight downstream tasks, we find that when accounting for inference cost, optimal pretraining decisions shift radically into the overtraining regime, well-outside of the range of standard pretraining scaling suites. We validate our results by pretraining heavily overtrained models in the optimal region that T^2 scaling forecasts, confirming their substantially stronger performance compared to pretraining scaling alone. Finally, as frontier LLMs are post-trained, we show that our findings survive the post-training stage, making T^2 scaling meaningful in modern deployments.",
+      "likes": 0,
+      "comments": 1,
+      "source": "HuggingFace Papers",
+      "category": "论文",
+      "created_at": "2026-04-01T00:00:00.000Z",
+      "author": "Nicholas Roberts, Sungjun Cho, Zhiqi Gao, Tzu-Heng Huang, Albert Wu, Gabriel Orlanski, Avi Trost, Kelly Buchanan, Aws Albarghouthi, Frederic Sala",
+      "hot_score": 0.04
     },
     {
       "title": "Do World Action Models Generalize Better than VLAs? A Robustness Study",
@@ -315,18 +316,6 @@
       "hot_score": 0.04
     },
     {
-      "title": "MDPBench: A Benchmark for Multilingual Document Parsing in Real-World Scenarios",
-      "url": "https://huggingface.co/papers/2603.28130",
-      "description": "We introduce Multilingual Document Parsing Benchmark, the first benchmark for multilingual digital and photographed document parsing. Document parsing has made remarkable strides, yet almost exclusively on clean, digital, well-formatted pages in a handful of dominant languages. No systematic benchmark exists to evaluate how models perform on digital and photographed documents across diverse scripts and low-resource languages. MDPBench comprises 3,400 document images spanning 17 languages, diverse scripts, and varied photographic conditions, with high-quality annotations produced through a rigorous pipeline of expert model labeling, manual correction, and human verification. To ensure fair comparison and prevent data leakage, we maintain separate public and private evaluation splits. Our comprehensive evaluation of both open-source and closed-source models uncovers a striking finding: while closed-source models (notably Gemini3-Pro) prove relatively robust, open-source alternatives suffer dramatic performance collapse, particularly on non-Latin scripts and real-world photographed documents, with an average drop of 17.8% on photographed documents and 14.0% on non-Latin scripts. These results reveal significant performance imbalances across languages and conditions, and point to concrete directions for building more inclusive, deployment-ready parsing systems. Source available at https://github.com/Yuliang-Liu/MultimodalOCR.",
-      "likes": 0,
-      "comments": 2,
-      "source": "HuggingFace Papers",
-      "category": "论文",
-      "created_at": "2026-03-30T07:47:46.000Z",
-      "author": "Zhang Li, Zhibo Lin, Qiang Liu, Ziyang Zhang, Shuo Zhang, Zidun Guo, Jiajun Song, Jiarui Zhang, Xiang Bai, Yuliang Liu",
-      "hot_score": 0.03
-    },
-    {
       "title": "An Empirical Recipe for Universal Phone Recognition",
       "url": "https://huggingface.co/papers/2603.29042",
       "description": "Phone recognition (PR) is a key enabler of multilingual and low-resource speech processing tasks, yet robust performance remains elusive. Highly performant English-focused models do not generalize across languages, while multilingual models underutilize pretrained representations. It also remains unclear how data scale, architecture, and training objective contribute to multilingual PR. We present PhoneticXEUS -- trained on large-scale multilingual data and achieving state-of-the-art performance on both multilingual (17.7% PFER) and accented English speech (10.6% PFER). Through controlled ablations with evaluations across 100+ languages under a unified scheme, we empirically establish our training recipe and quantify the impact of SSL representations, data scale, and loss objectives. In addition, we analyze error patterns across language families, accented speech, and articulatory features. All data and code are released openly.",
@@ -351,28 +340,28 @@
       "hot_score": 0.02
     },
     {
-      "title": "Memory-Augmented Vision-Language Agents for Persistent and Semantically Consistent Object Captioning",
-      "url": "https://huggingface.co/papers/2603.24257",
-      "description": "Vision-Language Models (VLMs) often yield inconsistent descriptions of the same object across viewpoints, hindering the ability of embodied agents to construct consistent semantic representations over time. Previous methods resolved inconsistencies using offline multi-view aggregation or multi-stage pipelines that decouple exploration, data association, and caption learning, with limited capacity to reason over previously observed objects. In this paper, we introduce a unified, memory-augmented Vision-Language agent that simultaneously handles data association, object captioning, and exploration policy within a single autoregressive framework. The model processes the current RGB observation, a top-down explored map, and an object-level episodic memory serialized into object-level tokens, ensuring persistent object identity and semantic consistency across extended sequences. To train the model in a self-supervised manner, we collect a dataset in photorealistic 3D environments using a disagreement-based policy and a pseudo-captioning model that enforces consistency across multi-view caption histories. Extensive evaluation on a manually annotated object-level test set, demonstrate improvements of up to +11.86% in standard captioning scores and +7.39% in caption self-similarity over baseline models, while enabling scalable performance through a compact scene representation. Code, model weights, and data are available at https://hsp-iit.github.io/epos-vlm/.",
+      "title": "MDPBench: A Benchmark for Multilingual Document Parsing in Real-World Scenarios",
+      "url": "https://huggingface.co/papers/2603.28130",
+      "description": "We introduce Multilingual Document Parsing Benchmark, the first benchmark for multilingual digital and photographed document parsing. Document parsing has made remarkable strides, yet almost exclusively on clean, digital, well-formatted pages in a handful of dominant languages. No systematic benchmark exists to evaluate how models perform on digital and photographed documents across diverse scripts and low-resource languages. MDPBench comprises 3,400 document images spanning 17 languages, diverse scripts, and varied photographic conditions, with high-quality annotations produced through a rigorous pipeline of expert model labeling, manual correction, and human verification. To ensure fair comparison and prevent data leakage, we maintain separate public and private evaluation splits. Our comprehensive evaluation of both open-source and closed-source models uncovers a striking finding: while closed-source models (notably Gemini3-Pro) prove relatively robust, open-source alternatives suffer dramatic performance collapse, particularly on non-Latin scripts and real-world photographed documents, with an average drop of 17.8% on photographed documents and 14.0% on non-Latin scripts. These results reveal significant performance imbalances across languages and conditions, and point to concrete directions for building more inclusive, deployment-ready parsing systems. Source available at https://github.com/Yuliang-Liu/MultimodalOCR.",
       "likes": 0,
       "comments": 2,
       "source": "HuggingFace Papers",
       "category": "论文",
-      "created_at": "2026-03-30T00:00:00.000Z",
-      "author": "Tommaso Galliena, Stefano Rosa, Tommaso Apicella, Pietro Morerio, Alessio Del Bue, Lorenzo Natale",
+      "created_at": "2026-03-30T07:47:46.000Z",
+      "author": "Zhang Li, Zhibo Lin, Qiang Liu, Ziyang Zhang, Shuo Zhang, Zidun Guo, Jiajun Song, Jiarui Zhang, Xiang Bai, Yuliang Liu",
       "hot_score": 0.02
     },
     {
-      "title": "LOME: Learning Human-Object Manipulation with Action-Conditioned Egocentric World Model",
-      "url": "https://huggingface.co/papers/2603.27449",
-      "description": "Learning human-object manipulation presents significant challenges due to its fine-grained and contact-rich nature of the motions involved. Traditional physics-based animation requires extensive modeling and manual setup, and more importantly, it neither generalizes well across diverse object morphologies nor scales effectively to real-world environment. To address these limitations, we introduce LOME, an egocentric world model that can generate realistic human-object interactions as videos conditioned on an input image, a text prompt, and per-frame human actions, including both body poses and hand gestures. LOME injects strong and precise action guidance into object manipulation by jointly estimating spatial human actions and the environment contexts during training. After finetuning a pretrained video generative model on videos of diverse egocentric human-object interactions, LOME demonstrates not only high action-following accuracy and strong generalization to unseen scenarios, but also realistic physical consequences of hand-object interactions, e.g., liquid flowing from a bottle into a mug after executing a ``pouring'' action. Extensive experiments demonstrate that our video-based framework significantly outperforms state-of-the-art image based and video-based action-conditioned methods and Image/Text-to-Video (I/T2V) generative model in terms of both temporal consistency and motion control. LOME paves the way for photorealistic AR/VR experiences and scalable robotic training, without being limited to simulated environments or relying on explicit 3D/4D modeling.",
+      "title": "Communicating about Space: Language-Mediated Spatial Integration Across Partial Views",
+      "url": "https://huggingface.co/papers/2603.27183",
+      "description": "Humans build shared spatial understanding by communicating partial, viewpoint-dependent observations. We ask whether Multimodal Large Language Models (MLLMs) can do the same, aligning distinct egocentric views through dialogue to form a coherent, allocentric mental model of a shared environment. To study this systematically, we introduce COSMIC, a benchmark for Collaborative Spatial Communication. In this setting, two static MLLM agents observe a 3D indoor environment from different viewpoints and exchange natural-language messages to solve spatial queries. COSMIC contains 899 diverse scenes and 1250 question-answer pairs spanning five tasks. We find a consistent capability hierarchy, MLLMs are most reliable at identifying shared anchor objects across views, perform worse on relational reasoning, and largely fail at building globally consistent maps, performing near chance, even for the frontier models. Moreover, we find thinking capability yields consistent gains in anchor grounding, but is insufficient for higher-level spatial communication. To contextualize model behavior, we additionally collect 250 human-human dialogues. Humans achieve 95% aggregate accuracy, leaving significant room for improvement for even the best performing model Gemini-3-Pro-Thinking which achieves 72% aggregate accuracy. Moreover, human conversations become increasingly specific as partners converge on a shared mental model, whereas model dialogues continue to explore new possibilities rather than converging, consistent with a limited ability to build and maintain a robust shared mental model. Our code and data is available at https://github.com/ankursikarwar/Cosmic",
       "likes": 0,
-      "comments": 2,
+      "comments": 1,
       "source": "HuggingFace Papers",
       "category": "论文",
-      "created_at": "2026-03-28T00:00:00.000Z",
-      "author": "Quankai Gao, Jiawei Yang, Qiangeng Xu, Le Chen, Yue Wang",
-      "hot_score": 0.01
+      "created_at": "2026-03-28T08:01:50.000Z",
+      "author": "Ankur Sikarwar, Debangan Mishra, Sudarshan Nikhil, Ponnurangam Kumaraguru, Aishwarya Agrawal",
+      "hot_score": 0.0
     },
     {
       "title": "AgentHazard: A Benchmark for Evaluating Harmful Behavior in Computer-Use Agents",
@@ -423,6 +412,18 @@
       "hot_score": 0.0
     },
     {
+      "title": "LOME: Learning Human-Object Manipulation with Action-Conditioned Egocentric World Model",
+      "url": "https://huggingface.co/papers/2603.27449",
+      "description": "Learning human-object manipulation presents significant challenges due to its fine-grained and contact-rich nature of the motions involved. Traditional physics-based animation requires extensive modeling and manual setup, and more importantly, it neither generalizes well across diverse object morphologies nor scales effectively to real-world environment. To address these limitations, we introduce LOME, an egocentric world model that can generate realistic human-object interactions as videos conditioned on an input image, a text prompt, and per-frame human actions, including both body poses and hand gestures. LOME injects strong and precise action guidance into object manipulation by jointly estimating spatial human actions and the environment contexts during training. After finetuning a pretrained video generative model on videos of diverse egocentric human-object interactions, LOME demonstrates not only high action-following accuracy and strong generalization to unseen scenarios, but also realistic physical consequences of hand-object interactions, e.g., liquid flowing from a bottle into a mug after executing a ``pouring'' action. Extensive experiments demonstrate that our video-based framework significantly outperforms state-of-the-art image based and video-based action-conditioned methods and Image/Text-to-Video (I/T2V) generative model in terms of both temporal consistency and motion control. LOME paves the way for photorealistic AR/VR experiences and scalable robotic training, without being limited to simulated environments or relying on explicit 3D/4D modeling.",
+      "likes": 0,
+      "comments": 2,
+      "source": "HuggingFace Papers",
+      "category": "论文",
+      "created_at": "2026-03-28T00:00:00.000Z",
+      "author": "Quankai Gao, Jiawei Yang, Qiangeng Xu, Le Chen, Yue Wang",
+      "hot_score": 0.0
+    },
+    {
       "title": "Working Notes on Late Interaction Dynamics: Analyzing Targeted Behaviors of Late Interaction Models",
       "url": "https://huggingface.co/papers/2603.26259",
       "description": "While Late Interaction models exhibit strong retrieval performance, many of their underlying dynamics remain understudied, potentially hiding performance bottlenecks. In this work, we focus on two topics in Late Interaction retrieval: a length bias that arises when using multi-vector scoring, and the similarity distribution beyond the best scores pooled by the MaxSim operator. We analyze these behaviors for state-of-the-art models on the NanoBEIR benchmark. Results show that while the theoretical length bias of causal Late Interaction models holds in practice, bi-directional models can also suffer from it in extreme cases. We also note that no significant similarity trend lies beyond the top-1 document token, validating that the MaxSim operator efficiently exploits the token-level similarity scores.",
@@ -446,5 +447,1070 @@
       "author": "Nicholas Edwards, Sebastian Schuster",
       "hot_score": 0.0
     }
-  ]
+  ],
+  "learning": {
+    "total_count": 50,
+    "categories": [
+      "AI Agent",
+      "AI绘图",
+      "RAG",
+      "入门教程",
+      "应用开发",
+      "提示词工程",
+      "模型教程",
+      "模型部署"
+    ],
+    "items": [
+      {
+        "id": "BV1iM4y1y7oA",
+        "bvid": "BV1iM4y1y7oA",
+        "title": "【<em class=\"keyword\">AI</em>绘画·25年最新】Stable Diffusion整合包v4.10发布！解压即用 防爆显存 三分钟<em class=\"keyword\">入门AI</em>绘画 ☆更新 ☆训练 ☆汉化 秋叶整合包",
+        "description": "最好用的整合包！持续更新中~ 求个关注加一键三连！\n最近一次更新整合包是 【2025年】不用担心，就是最新的！直接下载就好了\n拿了资源就给个关注吧，绝对是全网最好的整合包~ 拿完不会用？肯定还得回来看我的教程\n======================================================\n本整合包基于开源项目Stable Diffusion WebUI制作，仅供学习AIGC相关技术。\n任何使用整合包以及启动器，生成相关图片造成的后果以及责任都将由使用者承担。\n========",
+        "cover_url": "//i2.hdslb.com/bfs/archive/dc4277d0ea96b48ac984ae438a0bf7760e410135.jpg",
+        "up_name": "秋葉aaaki",
+        "duration": 239,
+        "play_num": 7188976,
+        "like_num": 449579,
+        "coin_num": 0,
+        "favorite_num": 0,
+        "tags": [
+          "AI入门",
+          "入门"
+        ],
+        "category": "入门教程",
+        "hot_score": 11684766,
+        "url": "https://www.bilibili.com/video/BV1iM4y1y7oA",
+        "created_at": "2026-04-07T01:08:39.759328"
+      },
+      {
+        "id": "BV1Gq4y177z7",
+        "bvid": "BV1Gq4y177z7",
+        "title": "Comfyui零基础教程+<em class=\"keyword\">AI</em>绘画sd教程<em class=\"keyword\">入门</em>实战：漫画生成项目拆解",
+        "description": "AI高级培训课程：https://www.bilibili.com/read/cv41479512\n📚学完即接单，稿费合同保障💰\n🏆获国家网信办算法备案✅\n💼服务华为/科大讯飞等2000+企业🌟\n🚀技术稳居国内头部阵营💪\n🤝真乙方公司，实战派教学📚\n👉AI高薪赛道，转型趁现在！",
+        "cover_url": "//i0.hdslb.com/bfs/archive/38555422f08507d43f0ddd12926143111439af3c.jpg",
+        "up_name": "生活就是画画画",
+        "duration": 420,
+        "play_num": 4391852,
+        "like_num": 240468,
+        "coin_num": 0,
+        "favorite_num": 0,
+        "tags": [
+          "AI入门",
+          "入门"
+        ],
+        "category": "入门教程",
+        "hot_score": 6796532,
+        "url": "https://www.bilibili.com/video/BV1Gq4y177z7",
+        "created_at": "2026-04-07T01:08:39.759344"
+      },
+      {
+        "id": "BV1jEAaz3E6K",
+        "bvid": "BV1jEAaz3E6K",
+        "title": "一个视频搞懂OpenClaw！",
+        "description": "诞生仅仅 60 天，GitHub 热度碾压十几年老资历 Linux！这个能一键控制电脑的AI智能体 OpenClaw，究竟是何方神圣？一个视频带你搞清楚！",
+        "cover_url": "//i2.hdslb.com/bfs/archive/0ec2033dba2c46b579af5bd08a8669592bee4752.jpg",
+        "up_name": "林亦LYi",
+        "duration": 593,
+        "play_num": 5099373,
+        "like_num": 131286,
+        "coin_num": 0,
+        "favorite_num": 0,
+        "tags": [
+          "智能体",
+          "Agent"
+        ],
+        "category": "AI Agent",
+        "hot_score": 6412233,
+        "url": "https://www.bilibili.com/video/BV1jEAaz3E6K",
+        "created_at": "2026-04-07T01:08:44.554486"
+      },
+      {
+        "id": "BV1Zw4m1m7YK",
+        "bvid": "BV1Zw4m1m7YK",
+        "title": "【断网补全计划37】我勒个大唐盛世，搜谱钩gi，弱智吧训练AI，调戏阿巴斯，提灯定损，成都迪士尼，尼达RPG，我cos的是海贼王里的路飞，手握披萨，炉石斩杀曲",
+        "description": "相关论文：https://arxiv.org/pdf/2403.18058.pdf",
+        "cover_url": "//i1.hdslb.com/bfs/archive/ceb98974b0e05c470b439cdca6cb2bdc715c52bf.jpg",
+        "up_name": "瞎问虾猜丶",
+        "duration": 539,
+        "play_num": 3568310,
+        "like_num": 132561,
+        "coin_num": 0,
+        "favorite_num": 0,
+        "tags": [
+          "智能体",
+          "Agent"
+        ],
+        "category": "AI Agent",
+        "hot_score": 4893920,
+        "url": "https://www.bilibili.com/video/BV1Zw4m1m7YK",
+        "created_at": "2026-04-07T01:08:44.554506"
+      },
+      {
+        "id": "BV1Zt421T7v5",
+        "bvid": "BV1Zt421T7v5",
+        "title": "和男友挑战用雍正皇帝的作息生活一天…晚上侍寝时他拒绝了我！",
+        "description": "其实雍正每天也挺忙的…",
+        "cover_url": "//i0.hdslb.com/bfs/archive/b5fcc60fb60d3abd1802f6c333d0f21a7f5bba97.jpg",
+        "up_name": "是王小白呀",
+        "duration": 586,
+        "play_num": 4194550,
+        "like_num": 56566,
+        "coin_num": 0,
+        "favorite_num": 0,
+        "tags": [
+          "智能体",
+          "Agent"
+        ],
+        "category": "AI Agent",
+        "hot_score": 4760210,
+        "url": "https://www.bilibili.com/video/BV1Zt421T7v5",
+        "created_at": "2026-04-07T01:08:44.554497"
+      },
+      {
+        "id": "BV17d4y1C73R",
+        "bvid": "BV17d4y1C73R",
+        "title": "【AI绘画】<em class=\"keyword\">Stable</em> <em class=\"keyword\">Diffusion</em> 最终版 无需额外下载安装！可更新✓ 训练✓  汉化✓ 提供7G模型 NovelAI",
+        "description": "本视频已过时，请前往新视频下载 &gt;&gt;&gt;&gt; https://www.bilibili.com/video/BV1iM4y1y7oA/",
+        "cover_url": "//i2.hdslb.com/bfs/archive/e22e6852865d367b3d220c709eb309f14d3586e8.jpg",
+        "up_name": "秋葉aaaki",
+        "duration": 121,
+        "play_num": 3150480,
+        "like_num": 127350,
+        "coin_num": 0,
+        "favorite_num": 0,
+        "tags": [
+          "Stable Diffusion 教程",
+          "绘图"
+        ],
+        "category": "AI绘图",
+        "hot_score": 4423980,
+        "url": "https://www.bilibili.com/video/BV17d4y1C73R",
+        "created_at": "2026-04-07T01:08:47.288331"
+      },
+      {
+        "id": "BV1Ui4tz1EDA",
+        "bvid": "BV1Ui4tz1EDA",
+        "title": "【<em class=\"keyword\">AI</em>黑科技】3分钟教你如何使用<em class=\"keyword\">AI</em>做一款app.....",
+        "description": "",
+        "cover_url": "//i2.hdslb.com/bfs/archive/e0f76e5ead14afe5cec4921fa72af3b825833781.jpg",
+        "up_name": "大老湿gg",
+        "duration": 197,
+        "play_num": 3608735,
+        "like_num": 21625,
+        "coin_num": 0,
+        "favorite_num": 0,
+        "tags": [
+          "AI入门",
+          "入门"
+        ],
+        "category": "入门教程",
+        "hot_score": 3824985,
+        "url": "https://www.bilibili.com/video/BV1Ui4tz1EDA",
+        "created_at": "2026-04-07T01:08:39.759349"
+      },
+      {
+        "id": "BV1nfn1zAEKS",
+        "bvid": "BV1nfn1zAEKS",
+        "title": "🍑鸡蛋啊~鸡蛋啊~🍑",
+        "description": "素材来自：BV1Tj411L77h",
+        "cover_url": "//i2.hdslb.com/bfs/archive/7e7e6dcf857e269660ea550ec58e27b0ebfc135b.jpg",
+        "up_name": "byd小绫",
+        "duration": 75,
+        "play_num": 1439890,
+        "like_num": 158471,
+        "coin_num": 0,
+        "favorite_num": 0,
+        "tags": [
+          "智能体",
+          "Agent"
+        ],
+        "category": "AI Agent",
+        "hot_score": 3024600,
+        "url": "https://www.bilibili.com/video/BV1nfn1zAEKS",
+        "created_at": "2026-04-07T01:08:44.554537"
+      },
+      {
+        "id": "BV1AQoTYrELS",
+        "bvid": "BV1AQoTYrELS",
+        "title": "什么是AI的圣杯？加入<em class=\"keyword\">deepseek</em>？？",
+        "description": "",
+        "cover_url": "//i0.hdslb.com/bfs/archive/6f4d8d73d6c2f8b66cb914f52f9b4d234495e344.jpg",
+        "up_name": "杏也AI玩具",
+        "duration": 125,
+        "play_num": 2578945,
+        "like_num": 39114,
+        "coin_num": 0,
+        "favorite_num": 0,
+        "tags": [
+          "DeepSeek 教程",
+          "模型教程"
+        ],
+        "category": "模型教程",
+        "hot_score": 2970085,
+        "url": "https://www.bilibili.com/video/BV1AQoTYrELS",
+        "created_at": "2026-04-07T01:08:46.712306"
+      },
+      {
+        "id": "BV1HKwmewEG4",
+        "bvid": "BV1HKwmewEG4",
+        "title": "什么理由会让你考虑换默认浏览器?",
+        "description": "浏览器是我们每一个人日常上网必备软件，想必很多人跟我一样,都在用Chrome浏览器或者基于Chromium的浏览器。而如果我跟你说,让你把默认浏览器换成其他的我想大多数人都不想动，不想动的理由并不是因为书签,最大的阻碍是插件...",
+        "cover_url": "//i2.hdslb.com/bfs/archive/a960ef025aa2ec32d95168b162aef3e706dcb7e0.jpg",
+        "up_name": "epcdiy",
+        "duration": 367,
+        "play_num": 2284523,
+        "like_num": 53274,
+        "coin_num": 0,
+        "favorite_num": 0,
+        "tags": [
+          "智能体",
+          "Agent"
+        ],
+        "category": "AI Agent",
+        "hot_score": 2817263,
+        "url": "https://www.bilibili.com/video/BV1HKwmewEG4",
+        "created_at": "2026-04-07T01:08:44.554509"
+      },
+      {
+        "id": "BV1t1421q7Kp",
+        "bvid": "BV1t1421q7Kp",
+        "title": "宇树发布 | Unitree G1  人形<em class=\"keyword\">智能体</em>  AI化身 ¥9.9万元起",
+        "description": "解锁无限运动潜力（超大关节运动空间角度，23~43 个关节）\n力控灵巧手，操作万物\n模仿&amp;强化学习驱动\n机器人世界大模型，大家一起来共创\nUnitree G1 ¥9.9万元起！",
+        "cover_url": "//i0.hdslb.com/bfs/archive/d7db8c92c777aae15a6f47f71fcf1ab1c797e994.jpg",
+        "up_name": "Unitree宇树科技",
+        "duration": 105,
+        "play_num": 1950244,
+        "like_num": 76447,
+        "coin_num": 0,
+        "favorite_num": 0,
+        "tags": [
+          "智能体",
+          "Agent"
+        ],
+        "category": "AI Agent",
+        "hot_score": 2714714,
+        "url": "https://www.bilibili.com/video/BV1t1421q7Kp",
+        "created_at": "2026-04-07T01:08:44.554521"
+      },
+      {
+        "id": "BV1k1421X7k9",
+        "bvid": "BV1k1421X7k9",
+        "title": "干净又卫生，多少带点臭，为什么印度沉迷糊糊？【为什么历史54】",
+        "description": "有什么疑问请弹幕留言\n嗷！别忘了点赞三连\n【BV18i4y197x6】【为什么历史30】四大文明古国只剩中国，为什么只有中国文明一直延续至今？\n【BV1H54y1n7cX】【为什么历史24】印度低种姓的人，为什么没把种姓制度推翻？\n【BV1M64y1m7tQ】【为什么历史23】为什么二战法国会成为一个笑话？\n【BV1Eo4y1f7Ep】【为什么历史20】为什么第一个国家却出现在埃及？",
+        "cover_url": "//i1.hdslb.com/bfs/archive/9eef25c30e27c797ec93f95e522ec8cc19c6e68f.jpg",
+        "up_name": "太阳星sunstar",
+        "duration": 531,
+        "play_num": 1871213,
+        "like_num": 79382,
+        "coin_num": 0,
+        "favorite_num": 0,
+        "tags": [
+          "智能体",
+          "Agent"
+        ],
+        "category": "AI Agent",
+        "hot_score": 2665033,
+        "url": "https://www.bilibili.com/video/BV1k1421X7k9",
+        "created_at": "2026-04-07T01:08:44.554528"
+      },
+      {
+        "id": "BV1ZmBQYjEea",
+        "bvid": "BV1ZmBQYjEea",
+        "title": "我宣布向量数据库才是查询鲁迅说没说的最优解法",
+        "description": "感谢Zilliz的和江浩老师的帮助，运用向量数据库开发了这个可以模糊搜索鲁迅先生名言的应用，永久解决冒充鲁迅名言的世纪难题！应用地址：https://github.com/BushJiang/LuXunWorks\nMilvus地址：https://github.com/milvus-io/milvus\n如果大家觉得有意思，求个一键三连！\n视频里提到的其他有趣的向量数据库应用地址：\n大白话变古诗词：https://github.com/BushJiang/searchPoems\n史先生：https://gi",
+        "cover_url": "//i0.hdslb.com/bfs/archive/2303b2406fd916f48ae63f197489bb5bb6aefa7e.jpg",
+        "up_name": "阿威日记_",
+        "duration": 205,
+        "play_num": 2541480,
+        "like_num": 11304,
+        "coin_num": 0,
+        "favorite_num": 0,
+        "tags": [
+          "RAG",
+          "RAG"
+        ],
+        "category": "RAG",
+        "hot_score": 2654520,
+        "url": "https://www.bilibili.com/video/BV1ZmBQYjEea",
+        "created_at": "2026-04-07T01:08:43.533817"
+      },
+      {
+        "id": "BV1RN411f72o",
+        "bvid": "BV1RN411f72o",
+        "title": "sd教程零基础<em class=\"keyword\">入门</em>秋叶，学<em class=\"keyword\">AI</em>绘画报培训班一定要注意【秋叶aaaki|秋叶SD整合包|秋叶sd零基础<em class=\"keyword\">入门</em>到精通教程|秋叶aaaki|<em class=\"keyword\">ai</em>绘画培训机构哪家好】",
+        "description": "AI高级人才培训课：戳👉https://www.bilibili.com/read/cv41603977\n\n📚学完即接单，稿费合同保障💰\n🏆获国家网信办算法备案✅\n💼服务华为/科大讯飞等2000+企业🌟\n🚀技术稳居国内头部阵营💪\n🤝真乙方公司，实战派教学📚\n👉AI高薪赛道，转型趁现在！\n\n👉赋能设计师群体：\n1. 平面设计师  \n2. 视觉设计师  \n3. 品牌设计师  \n4. 包装设计师  \n5. 插画设计师  \n6. 用户体验设计师（UX）  \n7. 用户界面设计师（UI）  \n8. 交互设计师  \n",
+        "cover_url": "//i2.hdslb.com/bfs/archive/fc0b24862086f24ebdb0425fdfd4e9dbfd58e615.jpg",
+        "up_name": "板绘教程库",
+        "duration": 91,
+        "play_num": 1506638,
+        "like_num": 107778,
+        "coin_num": 0,
+        "favorite_num": 0,
+        "tags": [
+          "AI入门",
+          "入门"
+        ],
+        "category": "入门教程",
+        "hot_score": 2584418,
+        "url": "https://www.bilibili.com/video/BV1RN411f72o",
+        "created_at": "2026-04-07T01:08:39.759353"
+      },
+      {
+        "id": "BV1Cw4m1e7AV",
+        "bvid": "BV1Cw4m1e7AV",
+        "title": "为什么AI画不好手？",
+        "description": "手的结构原理：https://www.ncbi.nlm.nih.gov/books/NBK279362/",
+        "cover_url": "//i0.hdslb.com/bfs/archive/bb428fc3ec1fe94a3b156d050b5d0776aa8849e2.jpg",
+        "up_name": "奥德修斯号Odyssey",
+        "duration": 222,
+        "play_num": 1940635,
+        "like_num": 63749,
+        "coin_num": 0,
+        "favorite_num": 0,
+        "tags": [
+          "智能体",
+          "Agent"
+        ],
+        "category": "AI Agent",
+        "hot_score": 2578125,
+        "url": "https://www.bilibili.com/video/BV1Cw4m1e7AV",
+        "created_at": "2026-04-07T01:08:44.554525"
+      },
+      {
+        "id": "BV1dt421A7Pm",
+        "bvid": "BV1dt421A7Pm",
+        "title": "这是不是你们的舍友",
+        "description": "-",
+        "cover_url": "//i1.hdslb.com/bfs/archive/8c035cdad9511135c00d29cba18a93b1bb965687.jpg",
+        "up_name": "不凉少年派",
+        "duration": 127,
+        "play_num": 1528442,
+        "like_num": 97705,
+        "coin_num": 0,
+        "favorite_num": 0,
+        "tags": [
+          "智能体",
+          "Agent"
+        ],
+        "category": "AI Agent",
+        "hot_score": 2505492,
+        "url": "https://www.bilibili.com/video/BV1dt421A7Pm",
+        "created_at": "2026-04-07T01:08:44.554535"
+      },
+      {
+        "id": "BV1Q1ArePEEw",
+        "bvid": "BV1Q1ArePEEw",
+        "title": "「牛的」稳定不卡顿的<em class=\"keyword\">DeepSeek</em>来喽！",
+        "description": "腾讯元宝：应用商店直接搜索即可下载。\n我是小宇Boi,一个分享黑科技的封号区UP主\n如果视频对你有帮助记得点赞投币+关注呀~",
+        "cover_url": "//i1.hdslb.com/bfs/archive/8331547d4aaa51fe13af5dbe50f149ea2289d730.jpg",
+        "up_name": "小宇Boi",
+        "duration": 101,
+        "play_num": 2014336,
+        "like_num": 41079,
+        "coin_num": 0,
+        "favorite_num": 0,
+        "tags": [
+          "DeepSeek 教程",
+          "模型教程"
+        ],
+        "category": "模型教程",
+        "hot_score": 2425126,
+        "url": "https://www.bilibili.com/video/BV1Q1ArePEEw",
+        "created_at": "2026-04-07T01:08:46.712318"
+      },
+      {
+        "id": "BV1D5pfz4E2Z",
+        "bvid": "BV1D5pfz4E2Z",
+        "title": "首个AI病毒诞生！斯坦福大学用AI设计出16种全新噬菌体，精准猎杀超级耐药性细菌！",
+        "description": "太炸裂了！AI第一次“造出病毒”！Nature刚刚公布了全球首例AI设计并验证成功的完整病毒基因组。",
+        "cover_url": "//i0.hdslb.com/bfs/archive/1d9a1080a50f47c8b06a5fc92ad03187fcf29a1f.jpg",
+        "up_name": "赛文乔伊",
+        "duration": 60,
+        "play_num": 1429815,
+        "like_num": 89223,
+        "coin_num": 0,
+        "favorite_num": 0,
+        "tags": [
+          "智能体",
+          "Agent"
+        ],
+        "category": "AI Agent",
+        "hot_score": 2322045,
+        "url": "https://www.bilibili.com/video/BV1D5pfz4E2Z",
+        "created_at": "2026-04-07T01:08:44.554540"
+      },
+      {
+        "id": "BV1NBfSYMEG8",
+        "bvid": "BV1NBfSYMEG8",
+        "title": "DeepSeek R1，<em class=\"keyword\">本地部署</em>才是王道！",
+        "description": "",
+        "cover_url": "//i1.hdslb.com/bfs/archive/3a3f981d4ad4513d8b7e393175c853b63746f006.jpg",
+        "up_name": "Jack-Cui",
+        "duration": 243,
+        "play_num": 1735860,
+        "like_num": 54596,
+        "coin_num": 0,
+        "favorite_num": 0,
+        "tags": [
+          "本地部署大模型",
+          "部署"
+        ],
+        "category": "模型部署",
+        "hot_score": 2281820,
+        "url": "https://www.bilibili.com/video/BV1NBfSYMEG8",
+        "created_at": "2026-04-07T01:08:42.133117"
+      },
+      {
+        "id": "BV1kA9EYwEhh",
+        "bvid": "BV1kA9EYwEhh",
+        "title": "从月光族到存款6位数，<em class=\"keyword\">AI</em>视频让我逆袭人生",
+        "description": "0基础3天吃透AI视频：入门实操、商用技巧与变现指南，不走弯路0基础上手变现！ \n现在报名送AI视频资料+高配云电脑+1v1指导，报名领取",
+        "cover_url": "//i1.hdslb.com/bfs/archive/16b774ebafd7e9545c543c9aa77668eb1d6d2999.jpg",
+        "up_name": "AI视频小轩课堂",
+        "duration": 145,
+        "play_num": 1992923,
+        "like_num": 21998,
+        "coin_num": 0,
+        "favorite_num": 0,
+        "tags": [
+          "AI基础",
+          "入门"
+        ],
+        "category": "入门教程",
+        "hot_score": 2212903,
+        "url": "https://www.bilibili.com/video/BV1kA9EYwEhh",
+        "created_at": "2026-04-07T01:08:40.504486"
+      },
+      {
+        "id": "BV1Akq5BrE1R",
+        "bvid": "BV1Akq5BrE1R",
+        "title": "所有人都在躲，她却一脚油门冲向火场！",
+        "description": "",
+        "cover_url": "//i1.hdslb.com/bfs/archive/94fcefc9c51f0e5ef80ec06c5de55fac49c336ea.jpg",
+        "up_name": "大司马科技说",
+        "duration": 124,
+        "play_num": 1230119,
+        "like_num": 97373,
+        "coin_num": 0,
+        "favorite_num": 0,
+        "tags": [
+          "智能体",
+          "Agent"
+        ],
+        "category": "AI Agent",
+        "hot_score": 2203849,
+        "url": "https://www.bilibili.com/video/BV1Akq5BrE1R",
+        "created_at": "2026-04-07T01:08:44.554547"
+      },
+      {
+        "id": "BV17L4y1P7Fr",
+        "bvid": "BV17L4y1P7Fr",
+        "title": "用<em class=\"keyword\">AI</em>讲素描真香",
+        "description": "",
+        "cover_url": "//i0.hdslb.com/bfs/archive/1384e7d90bfa71923444d117e97bc99ce9c6d6c4.jpg",
+        "up_name": "胖郭老师美术",
+        "duration": 180,
+        "play_num": 724345,
+        "like_num": 112389,
+        "coin_num": 0,
+        "favorite_num": 0,
+        "tags": [
+          "AI入门",
+          "入门"
+        ],
+        "category": "入门教程",
+        "hot_score": 1848235,
+        "url": "https://www.bilibili.com/video/BV17L4y1P7Fr",
+        "created_at": "2026-04-07T01:08:39.759382"
+      },
+      {
+        "id": "BV1ag4y1F7x4",
+        "bvid": "BV1ag4y1F7x4",
+        "title": "我用30天写了一个完美的贪吃蛇AI",
+        "description": "AI 征服经典游戏贪吃蛇。项目链接：https://github.com/linyiLYi/snake-ai\n\n章节信息：\n00:00 AutoGPT写游戏\n01:37 AI 打爆贪吃蛇\n08:34 思考",
+        "cover_url": "//i2.hdslb.com/bfs/archive/db3492dbf05318a0880ee1e6f5b315f43e618f3b.jpg",
+        "up_name": "林亦LYi",
+        "duration": 591,
+        "play_num": 1076403,
+        "like_num": 72309,
+        "coin_num": 0,
+        "favorite_num": 0,
+        "tags": [
+          "AutoGPT",
+          "Agent"
+        ],
+        "category": "AI Agent",
+        "hot_score": 1799493,
+        "url": "https://www.bilibili.com/video/BV1ag4y1F7x4",
+        "created_at": "2026-04-07T01:08:44.929668"
+      },
+      {
+        "id": "BV1tHFQeSEjr",
+        "bvid": "BV1tHFQeSEjr",
+        "title": "<em class=\"keyword\">DeepSeek</em>上手第一步！5个新手必学的「人性化」使用技巧",
+        "description": "新年好～ 多点喜气，少点戾气",
+        "cover_url": "//i1.hdslb.com/bfs/archive/a6c7a29259477df27bc1756de792ee4f48c96f4c.jpg",
+        "up_name": "鱼摆摆喂",
+        "duration": 506,
+        "play_num": 1315269,
+        "like_num": 47618,
+        "coin_num": 0,
+        "favorite_num": 0,
+        "tags": [
+          "DeepSeek 教程",
+          "模型教程"
+        ],
+        "category": "模型教程",
+        "hot_score": 1791449,
+        "url": "https://www.bilibili.com/video/BV1tHFQeSEjr",
+        "created_at": "2026-04-07T01:08:46.712327"
+      },
+      {
+        "id": "BV1zNLbziET4",
+        "bvid": "BV1zNLbziET4",
+        "title": "蛋仔派对：当我驯化蛋仔AI<em class=\"keyword\">智能体</em>！它居然敢这样回复我？",
+        "description": "蛋仔派对：当我驯化蛋仔AI智能体！它居然敢这样回复我？",
+        "cover_url": "//i0.hdslb.com/bfs/archive/fe0cd2885e345a3a35ddddbabcb258240dc7e904.jpg",
+        "up_name": "蛋仔饭特稀",
+        "duration": 205,
+        "play_num": 1714745,
+        "like_num": 2342,
+        "coin_num": 0,
+        "favorite_num": 0,
+        "tags": [
+          "智能体",
+          "Agent"
+        ],
+        "category": "AI Agent",
+        "hot_score": 1738165,
+        "url": "https://www.bilibili.com/video/BV1zNLbziET4",
+        "created_at": "2026-04-07T01:08:44.554532"
+      },
+      {
+        "id": "BV174QZYwEqt",
+        "bvid": "BV174QZYwEqt",
+        "title": "<em class=\"keyword\">DeepSeek</em>自创超声波嫩化牛排，声波爆锤肌肉纤维",
+        "description": "AI还是有点东西的，瞬间思路打开，等搬新场地就可以继续更多大胆的尝试。",
+        "cover_url": "//i2.hdslb.com/bfs/archive/47fbad3d45962b9660dd1f72d99d88e685cd84ea.jpg",
+        "up_name": "燕子堡BBQ学徒Ray",
+        "duration": 430,
+        "play_num": 1225858,
+        "like_num": 47844,
+        "coin_num": 0,
+        "favorite_num": 0,
+        "tags": [
+          "DeepSeek 教程",
+          "模型教程"
+        ],
+        "category": "模型教程",
+        "hot_score": 1704298,
+        "url": "https://www.bilibili.com/video/BV174QZYwEqt",
+        "created_at": "2026-04-07T01:08:46.712333"
+      },
+      {
+        "id": "BV1GCPKekEDA",
+        "bvid": "BV1GCPKekEDA",
+        "title": "免费满血<em class=\"keyword\">deepseek</em>，不卡顿无限使用！",
+        "description": "腾讯元宝集成满血deepseek和混元T1两大模型，加上微信生态内容，堪称王炸！",
+        "cover_url": "//i1.hdslb.com/bfs/archive/443bb87010f2b13416c6c0e2f75057e0ddea186e.jpg",
+        "up_name": "RGB工具人",
+        "duration": 228,
+        "play_num": 1486544,
+        "like_num": 21427,
+        "coin_num": 0,
+        "favorite_num": 0,
+        "tags": [
+          "DeepSeek 教程",
+          "模型教程"
+        ],
+        "category": "模型教程",
+        "hot_score": 1700814,
+        "url": "https://www.bilibili.com/video/BV1GCPKekEDA",
+        "created_at": "2026-04-07T01:08:46.712321"
+      },
+      {
+        "id": "BV1vQsEzoEvt",
+        "bvid": "BV1vQsEzoEvt",
+        "title": "我花了一天时间教会了0基础小白用<em class=\"keyword\">AI</em>变现【内附资料】",
+        "description": "耗时三个月，我们的AI训练营终于出炉啦！ 花费近5w，真实案例，最终做了这节训练营！\n每天有50个免费名额~拼手速咯",
+        "cover_url": "//i2.hdslb.com/bfs/archive/ea7876f2f32181aaefac498ee377dfd0ceaa833e.jpg",
+        "up_name": "源宝AIGC",
+        "duration": 177,
+        "play_num": 1440430,
+        "like_num": 24545,
+        "coin_num": 0,
+        "favorite_num": 0,
+        "tags": [
+          "AI基础",
+          "入门"
+        ],
+        "category": "入门教程",
+        "hot_score": 1685880,
+        "url": "https://www.bilibili.com/video/BV1vQsEzoEvt",
+        "created_at": "2026-04-07T01:08:40.504492"
+      },
+      {
+        "id": "BV1fa4y1G71W",
+        "bvid": "BV1fa4y1G71W",
+        "title": "【AI绘画】全面升级！ControlNet1.1 使用<em class=\"keyword\">教程</em> 更加强大的控制功能！线稿上色/风格迁移/局部修改",
+        "description": "链接: https://pan.baidu.com/s/1rh39DI9xVbguLO5l7O4pjA\n提取码: yqqe\n================================\n视频制作不易，求个三连加关注！！！\n免费的赞也行！！！\n================================\nhuggingface：\nhttps://huggingface.co/lllyasviel/ControlNet-v1-1/tree/main\n\n没安装过插件的可以参考我之前的视频安装，或者直接输",
+        "cover_url": "//i1.hdslb.com/bfs/archive/a6158f493641cfb1829d90fde563e69b5b01f460.jpg",
+        "up_name": "秋葉aaaki",
+        "duration": 408,
+        "play_num": 1175833,
+        "like_num": 44037,
+        "coin_num": 0,
+        "favorite_num": 0,
+        "tags": [
+          "Stable Diffusion 教程",
+          "绘图"
+        ],
+        "category": "AI绘图",
+        "hot_score": 1616203,
+        "url": "https://www.bilibili.com/video/BV1fa4y1G71W",
+        "created_at": "2026-04-07T01:08:47.288335"
+      },
+      {
+        "id": "BV1y7U8YXEYM",
+        "bvid": "BV1y7U8YXEYM",
+        "title": "【实测有用】comfyui 全套软件，安装，使用教程。手把手<em class=\"keyword\">入门</em>到精通 <em class=\"keyword\">Ai</em>绘画软件 ComfyUI教程绘画插件安装工作流AnimateDiff动画课程 95G",
+        "description": "【实测真实有用】comfyui 全套软件，安装，使用教程。手把手入门到精通 Ai绘画软件 ComfyUI教程绘画插件安装工作流AnimateDiff动画课程 95G 助力你人工智能时代不掉队 大语言模型时代不掉队",
+        "cover_url": "//i0.hdslb.com/bfs/archive/81635ccce59b661e761b90cd72a4a31eef61e839.jpg",
+        "up_name": "机器爱上学习",
+        "duration": 108,
+        "play_num": 957529,
+        "like_num": 65767,
+        "coin_num": 0,
+        "favorite_num": 0,
+        "tags": [
+          "AI入门",
+          "入门"
+        ],
+        "category": "入门教程",
+        "hot_score": 1615199,
+        "url": "https://www.bilibili.com/video/BV1y7U8YXEYM",
+        "created_at": "2026-04-07T01:08:39.759361"
+      },
+      {
+        "id": "BV1PiNaeTEjn",
+        "bvid": "BV1PiNaeTEjn",
+        "title": "全网最简单的<em class=\"keyword\">Deepseek</em>本地部署方法，谁都可以照抄！",
+        "description": "希望大家能在收藏的同时：点个赞、投个币、关个注，感谢大家！\n\n【图文教程】\n可以在我【公众号：小众技术】回复关键词：【deepseek】查看\n\n【软件下载地址：不需要科学上网】\nollama官网：https://ollama.com/\ncherry studio官网：https://cherry-ai.com/\n\n【模型选择】\n电脑没有独立显卡：选择1.5b模型\n有独显，显存4G或8G：选择7b或8b模型\n更高的配置，可以自行尝试！\n我自己8g显存的4060，可以运行32b模型，但比较卡！",
+        "cover_url": "//i0.hdslb.com/bfs/archive/e9139bf95da16b5f7627a59455afa68fb774d9bc.jpg",
+        "up_name": "我是阿众",
+        "duration": 227,
+        "play_num": 1253245,
+        "like_num": 30370,
+        "coin_num": 0,
+        "favorite_num": 0,
+        "tags": [
+          "DeepSeek 教程",
+          "模型教程"
+        ],
+        "category": "模型教程",
+        "hot_score": 1556945,
+        "url": "https://www.bilibili.com/video/BV1PiNaeTEjn",
+        "created_at": "2026-04-07T01:08:46.712330"
+      },
+      {
+        "id": "BV1vm4y1B7gP",
+        "bvid": "BV1vm4y1B7gP",
+        "title": "一站式<em class=\"keyword\">入门AI</em>绘画！Midjourney胎教级<em class=\"keyword\">入门</em>指南！普通人也能成为设计师",
+        "description": "今天这个视频，我将从Midjourney的安装、入门、进阶使用，一站式教大家如何使用Midjourney:\n\n1. Midjourney能做些什么\n2. Midjourney的安装和基操\n3. 如何创建自己的mj频道\n4. 如何写Prompt提示词\n5. Midjourney进阶技巧：\n垫图/Blend混图/Remix微调/Seed种子/Describe以图生文 \n\n调教Chat GPT如何写Midjourney提示词prompt 的魔法：\n\nI&#x27;m using an image generating a",
+        "cover_url": "//i2.hdslb.com/bfs/archive/96680c0b0c355aa5eaf1217001de9a3ee439e4fd.jpg",
+        "up_name": "Xuan_酱",
+        "duration": 546,
+        "play_num": 1153723,
+        "like_num": 39491,
+        "coin_num": 0,
+        "favorite_num": 0,
+        "tags": [
+          "AI入门",
+          "入门"
+        ],
+        "category": "入门教程",
+        "hot_score": 1548633,
+        "url": "https://www.bilibili.com/video/BV1vm4y1B7gP",
+        "created_at": "2026-04-07T01:08:39.759358"
+      },
+      {
+        "id": "BV1soCTBzEDN",
+        "bvid": "BV1soCTBzEDN",
+        "title": "基础款不要搭基础款，命令行基础...",
+        "description": "",
+        "cover_url": "//i1.hdslb.com/bfs/archive/4d7788ddc31253bdc3b751ab8a4f68c0463113c0.jpg",
+        "up_name": "是花子呀_",
+        "duration": 271,
+        "play_num": 1055676,
+        "like_num": 42205,
+        "coin_num": 0,
+        "favorite_num": 0,
+        "tags": [
+          "AI基础",
+          "入门"
+        ],
+        "category": "入门教程",
+        "hot_score": 1477726,
+        "url": "https://www.bilibili.com/video/BV1soCTBzEDN",
+        "created_at": "2026-04-07T01:08:40.504495"
+      },
+      {
+        "id": "BV1pzAJefEbn",
+        "bvid": "BV1pzAJefEbn",
+        "title": "白嫖满血版+微信独家信息，揭密“腾讯版”<em class=\"keyword\">DeepSeek</em>三大实用技巧",
+        "description": "满血版 R1 模型+微信独家信息\n揭密“腾讯版”DeepSeek三大实用技巧 👀",
+        "cover_url": "//i1.hdslb.com/bfs/archive/b60c52b67db5a0cbe6adbad02e2ee280ab069eb6.jpg",
+        "up_name": "林粒粒呀",
+        "duration": 180,
+        "play_num": 1035688,
+        "like_num": 42383,
+        "coin_num": 0,
+        "favorite_num": 0,
+        "tags": [
+          "DeepSeek 教程",
+          "模型教程"
+        ],
+        "category": "模型教程",
+        "hot_score": 1459518,
+        "url": "https://www.bilibili.com/video/BV1pzAJefEbn",
+        "created_at": "2026-04-07T01:08:46.712339"
+      },
+      {
+        "id": "BV11JNce2E2d",
+        "bvid": "BV11JNce2E2d",
+        "title": "【保姆级<em class=\"keyword\">教程</em>】最强国产AI模型<em class=\"keyword\">DeepSeek</em>满血版本地运行，90岁老奶奶都能玩明白！",
+        "description": "DeepSeek满血版api注册链接（注册即送2000万Token）\nhttps://cloud.siliconflow.cn/i/kTpKvgrz\n\nAI聊天客户端网盘下载\n链接：https://pan.quark.cn/s/c778374da682\n\nDeepSeek本地模型下载地址\nhttps://ollama.com/library/deepseek-r1\n\n网上搜集的DeepSeek使用技巧大全：https://pan.quark.cn/s/69f76c763f93\n\n想系统学习AI工作流，我的",
+        "cover_url": "//i1.hdslb.com/bfs/archive/7c56a55312f36ca2edf409586ca50fae2fe3bce0.jpg",
+        "up_name": "来真的",
+        "duration": 599,
+        "play_num": 1055198,
+        "like_num": 37367,
+        "coin_num": 0,
+        "favorite_num": 0,
+        "tags": [
+          "DeepSeek 教程",
+          "模型教程"
+        ],
+        "category": "模型教程",
+        "hot_score": 1428868,
+        "url": "https://www.bilibili.com/video/BV11JNce2E2d",
+        "created_at": "2026-04-07T01:08:46.712336"
+      },
+      {
+        "id": "BV12QSYB8EMY",
+        "bvid": "BV12QSYB8EMY",
+        "title": "【短盘点】鸿蒙搞直播？小艺好友多！八分钟速通鸿蒙生态近期新变化！",
+        "description": "鸿蒙首发高清直播！小红书和B站首发独家功能！\n华为Mate X7首发A2A智能体协作！\n鸿蒙版夸克搜题so easy！\n一台鸿蒙5的华为手机带你逛遍北京大学！\n鸿蒙版小红书独家首发“搜地点直达笔记”功能！\n鸿蒙版知乎双buff加持！无缝流转随心分享！\n鸿蒙星河互联登陆 App Store，华为与苹果正式互通！",
+        "cover_url": "//i0.hdslb.com/bfs/archive/aa5250b2499d9810f84c3ddf7309d5267dd9d64f.jpg",
+        "up_name": "无聊科技",
+        "duration": 498,
+        "play_num": 1343500,
+        "like_num": 7940,
+        "coin_num": 0,
+        "favorite_num": 0,
+        "tags": [
+          "智能体",
+          "Agent"
+        ],
+        "category": "AI Agent",
+        "hot_score": 1422900,
+        "url": "https://www.bilibili.com/video/BV12QSYB8EMY",
+        "created_at": "2026-04-07T01:08:44.554542"
+      },
+      {
+        "id": "BV1pMAWeiEsN",
+        "bvid": "BV1pMAWeiEsN",
+        "title": "流畅不卡顿，接入了<em class=\"keyword\">Deepseek</em>满血版的腾讯元宝，体验竟然这么爽。。。",
+        "description": "视频制作不易，不要忘记点赞、投币、加关注哦！\n\n------------------------------------------------------\n\n主页还有更多精彩内容~~",
+        "cover_url": "//i0.hdslb.com/bfs/archive/99fe17ba84f069d3cb1ec35bbb2101cae4af7c2e.jpg",
+        "up_name": "周哗哗",
+        "duration": 149,
+        "play_num": 942186,
+        "like_num": 36373,
+        "coin_num": 0,
+        "favorite_num": 0,
+        "tags": [
+          "DeepSeek 教程",
+          "模型教程"
+        ],
+        "category": "模型教程",
+        "hot_score": 1305916,
+        "url": "https://www.bilibili.com/video/BV1pMAWeiEsN",
+        "created_at": "2026-04-07T01:08:46.712341"
+      },
+      {
+        "id": "BV1da4y1k78p",
+        "bvid": "BV1da4y1k78p",
+        "title": "当我开发出史料检索<em class=\"keyword\">RAG</em>应用，正史怪又该如何应对？",
+        "description": "简介：\n我用RAG应用“治愈”了大语言模型的幻觉问题，背后的原因让人闹心：\n“正史怪”的分布是广泛的，试图让大语言模型回答历史问题是不靠谱的，唯有RAG应用可让此事幽而复明。\n\n项目地址：https://github.com/wxywb/history_rag",
+        "cover_url": "//i2.hdslb.com/bfs/archive/82209c8028f9efef38c92923d8de49c2f5a03324.jpg",
+        "up_name": "Ele实验室",
+        "duration": 313,
+        "play_num": 725200,
+        "like_num": 54115,
+        "coin_num": 0,
+        "favorite_num": 0,
+        "tags": [
+          "RAG",
+          "RAG"
+        ],
+        "category": "RAG",
+        "hot_score": 1266350,
+        "url": "https://www.bilibili.com/video/BV1da4y1k78p",
+        "created_at": "2026-04-07T01:08:43.533832"
+      },
+      {
+        "id": "BV1AW411c7VB",
+        "bvid": "BV1AW411c7VB",
+        "title": "最近很火的英文歌《Skin》一开口耳朵就要怀孕了",
+        "description": "最近很火的英文歌《Skin》一开口耳朵就要怀孕了\n音乐：Skin (肌肤) - Rag&#x27;N&#x27;Bone Man\n视频：航拍素材",
+        "cover_url": "//i1.hdslb.com/bfs/archive/20af19c3297cc6c3babec246edfbf6cd3b9fe19c.jpg",
+        "up_name": "大鹏不想飞",
+        "duration": 235,
+        "play_num": 1151191,
+        "like_num": 7765,
+        "coin_num": 0,
+        "favorite_num": 0,
+        "tags": [
+          "RAG",
+          "RAG"
+        ],
+        "category": "RAG",
+        "hot_score": 1228841,
+        "url": "https://www.bilibili.com/video/BV1AW411c7VB",
+        "created_at": "2026-04-07T01:08:43.533829"
+      },
+      {
+        "id": "BV1nexGebELa",
+        "bvid": "BV1nexGebELa",
+        "title": "<em class=\"keyword\">AI</em>语音生成零基础<em class=\"keyword\">入门</em>教学（GPT-Sovits）",
+        "description": "AI克隆声音，AI训练声音模型，AI配音必不可缺的软件——GPTsovits教学视频\n适用于windows，50系显卡用户下载前看网盘里50系下载   mac看置顶评论\n后续如果有更新会继续发在下边这个链接\n整合包夸克网盘链接：https://pan.quark.cn/s/4f98b9150b79\n提取码：8CQw\n「整合包教程202505.docx」夸克：https://pan.quark.cn/s/637f00d7508c\n夸克GPTSOVITS报错合集链接：https://pan.quark.cn/",
+        "cover_url": "//i2.hdslb.com/bfs/archive/b2397475eefa3b2946df30b637433d67aa4ffc81.jpg",
+        "up_name": "加一不等式",
+        "duration": 467,
+        "play_num": 887234,
+        "like_num": 30084,
+        "coin_num": 0,
+        "favorite_num": 0,
+        "tags": [
+          "AI入门",
+          "入门"
+        ],
+        "category": "入门教程",
+        "hot_score": 1188074,
+        "url": "https://www.bilibili.com/video/BV1nexGebELa",
+        "created_at": "2026-04-07T01:08:39.759367"
+      },
+      {
+        "id": "BV1GZXkYUEXU",
+        "bvid": "BV1GZXkYUEXU",
+        "title": "现在<em class=\"keyword\">AI</em>编程这么厉害，还有必要学代码吗？怎么用<em class=\"keyword\">AI</em>来帮自己<em class=\"keyword\">入门</em>编程？",
+        "description": "计算器那么好用，还有必要学数学吗？",
+        "cover_url": "//i1.hdslb.com/bfs/archive/f59f9fab3f04ebdaf42e0f26dd91cf9535f9781a.jpg",
+        "up_name": "玄离199",
+        "duration": 329,
+        "play_num": 900801,
+        "like_num": 28513,
+        "coin_num": 0,
+        "favorite_num": 0,
+        "tags": [
+          "AI入门",
+          "入门"
+        ],
+        "category": "入门教程",
+        "hot_score": 1185931,
+        "url": "https://www.bilibili.com/video/BV1GZXkYUEXU",
+        "created_at": "2026-04-07T01:08:39.759365"
+      },
+      {
+        "id": "BV1HgmvBJE3J",
+        "bvid": "BV1HgmvBJE3J",
+        "title": "900w激励金？被逼离职后，我用AI<em class=\"keyword\">开发</em>鸿蒙应用“捞”钱？",
+        "description": "-",
+        "cover_url": "//i2.hdslb.com/bfs/archive/214f2fc39bed400f48b13be44edcf0841b866f05.jpg",
+        "up_name": "超级小華",
+        "duration": 431,
+        "play_num": 985439,
+        "like_num": 13699,
+        "coin_num": 0,
+        "favorite_num": 0,
+        "tags": [
+          "AI应用开发",
+          "开发"
+        ],
+        "category": "应用开发",
+        "hot_score": 1122429,
+        "url": "https://www.bilibili.com/video/BV1HgmvBJE3J",
+        "created_at": "2026-04-07T01:08:45.331893"
+      },
+      {
+        "id": "BV1hD4y1b7Aq",
+        "bvid": "BV1hD4y1b7Aq",
+        "title": "【耗时30天，修改上百次！】适合所有零基础人群的最全人工智能学习路线，我给做出来了！-人工智能/<em class=\"keyword\">AI</em>/深度学习/机器学习",
+        "description": "大家好，我是Future！耗时30天！与零基础粉丝朋友沟通交流，反复修改了近百次，终于把适合所有零基础人群的最全人工智能学习路线给做出来了，当中每个知识点都推荐了对应的教程，且教程都是精心筛选过的，希望能够帮助到想入门人工智能的小伙伴！",
+        "cover_url": "//i1.hdslb.com/bfs/archive/0e1968bbd35a65fb377c1e673f5426d6abf4cbe9.jpg",
+        "up_name": "AI算法工程师Future",
+        "duration": 201,
+        "play_num": 633785,
+        "like_num": 46483,
+        "coin_num": 0,
+        "favorite_num": 0,
+        "tags": [
+          "AI基础",
+          "入门"
+        ],
+        "category": "入门教程",
+        "hot_score": 1098615,
+        "url": "https://www.bilibili.com/video/BV1hD4y1b7Aq",
+        "created_at": "2026-04-07T01:08:40.504514"
+      },
+      {
+        "id": "BV1NX4y1Q7MH",
+        "bvid": "BV1NX4y1Q7MH",
+        "title": "【<em class=\"keyword\">入门</em>02】喂饭级stable diffusion安装教程，有手就会不折腾",
+        "description": "整合包就是秋叶大大的整合包，这里做搬运：\n链接：https://pan.quark.cn/s/218e0e20a915\n02.stable diffusion整合包安装\n\n下载模型的C站地址：https://civitai.com/  有时候可能需要挂梯子。",
+        "cover_url": "//i1.hdslb.com/bfs/archive/caace6f63f839bf01291e90cba5fbaaee744860a.jpg",
+        "up_name": "靠谱的轩轩",
+        "duration": 366,
+        "play_num": 875840,
+        "like_num": 19231,
+        "coin_num": 0,
+        "favorite_num": 0,
+        "tags": [
+          "AI入门",
+          "入门"
+        ],
+        "category": "入门教程",
+        "hot_score": 1068150,
+        "url": "https://www.bilibili.com/video/BV1NX4y1Q7MH",
+        "created_at": "2026-04-07T01:08:39.759371"
+      },
+      {
+        "id": "BV1gk4y1h7xF",
+        "bvid": "BV1gk4y1h7xF",
+        "title": "【AI绘画】人设自由！人设三视图一键生成 ControlNet实战<em class=\"keyword\">教程</em> <em class=\"keyword\">Stable</em> <em class=\"keyword\">Diffusion</em>",
+        "description": "LoRA 模型：charturnerbeta 推荐权重：0.2-0.6\n骨骼：Character Turnaround OpenPose\n================================\n视频制作不易，求个三连加关注！！！\n免费的赞也行！！！\n================================\n视频中用到的文件链接：https://pan.quark.cn/s/14ccfced19c8",
+        "cover_url": "//i2.hdslb.com/bfs/archive/d1f47488801fad394ef28149afe0a2b50d85ed7e.jpg",
+        "up_name": "秋葉aaaki",
+        "duration": 131,
+        "play_num": 710703,
+        "like_num": 33800,
+        "coin_num": 0,
+        "favorite_num": 0,
+        "tags": [
+          "Stable Diffusion 教程",
+          "绘图"
+        ],
+        "category": "AI绘图",
+        "hot_score": 1048703,
+        "url": "https://www.bilibili.com/video/BV1gk4y1h7xF",
+        "created_at": "2026-04-07T01:08:47.288344"
+      },
+      {
+        "id": "BV1ar2mYVEKh",
+        "bvid": "BV1ar2mYVEKh",
+        "title": "【<em class=\"keyword\">入门</em>指南】不会建模，怎么 3D 打印？丨小宁子",
+        "description": "不用建模，谁都能做！",
+        "cover_url": "//i1.hdslb.com/bfs/archive/f292b8e3644eb2c6ef3671668a19380144024b33.jpg",
+        "up_name": "贪玩歌姬小宁子",
+        "duration": 574,
+        "play_num": 806485,
+        "like_num": 22825,
+        "coin_num": 0,
+        "favorite_num": 0,
+        "tags": [
+          "AI入门",
+          "入门"
+        ],
+        "category": "入门教程",
+        "hot_score": 1034735,
+        "url": "https://www.bilibili.com/video/BV1ar2mYVEKh",
+        "created_at": "2026-04-07T01:08:39.759373"
+      },
+      {
+        "id": "BV1VWFve5Efz",
+        "bvid": "BV1VWFve5Efz",
+        "title": "当你让<em class=\"keyword\">Deepseek</em>写MC模组，而它却成功运行了？！",
+        "description": "实际操作可能会需要一定的编程基础，不过以目前AI的迭代更新速度来看，相信在不久的将来，每个人都能使用AI创作出自己喜欢的玩法！\n\n——————————————————————————\n『模组下载方法』\n点击关注以后会由系统自动发放下载链接~\n如果已经关注过，重新关注即可！\n注意：该操作每日仅可使用一次\n——————————————————————————",
+        "cover_url": "//i0.hdslb.com/bfs/archive/2e1698806123bade718520592a957bcdf7e6b3b7.jpg",
+        "up_name": "进击的蟹某人",
+        "duration": 464,
+        "play_num": 658918,
+        "like_num": 36997,
+        "coin_num": 0,
+        "favorite_num": 0,
+        "tags": [
+          "DeepSeek 教程",
+          "模型教程"
+        ],
+        "category": "模型教程",
+        "hot_score": 1028888,
+        "url": "https://www.bilibili.com/video/BV1VWFve5Efz",
+        "created_at": "2026-04-07T01:08:46.712350"
+      },
+      {
+        "id": "BV1GPQzYNERQ",
+        "bvid": "BV1GPQzYNERQ",
+        "title": "基础差就不能高绩点？大学逆袭指南！基础越差越有用，赶紧收藏",
+        "description": "每天熬夜刷题，奈何基础不好，怎么也理解不了题目\n想查个资料，漫天的广告和垃圾信息根本找不到目标内容\n谁说基础差就不能拿高绩点？\n谁说关键信息不能一搜就有？\n今天跟大家分享帮助大学生们轻松逆袭的AI工具\n希望能够帮助到大家～",
+        "cover_url": "//i1.hdslb.com/bfs/archive/8ed520b4a29b22728326065171758401c2b806e5.jpg",
+        "up_name": "爱吃年糕的阿泽",
+        "duration": 263,
+        "play_num": 930409,
+        "like_num": 4263,
+        "coin_num": 0,
+        "favorite_num": 0,
+        "tags": [
+          "AI基础",
+          "入门"
+        ],
+        "category": "入门教程",
+        "hot_score": 973039,
+        "url": "https://www.bilibili.com/video/BV1GPQzYNERQ",
+        "created_at": "2026-04-07T01:08:40.504498"
+      },
+      {
+        "id": "BV1TKPFeyEJu",
+        "bvid": "BV1TKPFeyEJu",
+        "title": "DeepSeek干翻弱智吧！feat.bilibili新国辩",
+        "description": "终结弱智吧！学了辩论的DeepSeek有多强？feat.bilibili新国辩",
+        "cover_url": "//i1.hdslb.com/bfs/archive/3335188ccc9e19258c541830b50d29fa56361077.jpg",
+        "up_name": "林亦LYi",
+        "duration": 593,
+        "play_num": 680567,
+        "like_num": 24388,
+        "coin_num": 0,
+        "favorite_num": 0,
+        "tags": [
+          "提示词工程",
+          "提示词"
+        ],
+        "category": "提示词工程",
+        "hot_score": 924447,
+        "url": "https://www.bilibili.com/video/BV1TKPFeyEJu",
+        "created_at": "2026-04-07T01:08:40.858804"
+      },
+      {
+        "id": "BV1fDAJenEdE",
+        "bvid": "BV1fDAJenEdE",
+        "title": "腾讯元宝：正式接入<em class=\"keyword\">DeepSeek</em>-R1满血版",
+        "description": "片尾没有彩蛋",
+        "cover_url": "//i1.hdslb.com/bfs/archive/6dde4cb3ead9ae33f56f106dde77bfc2b014e332.jpg",
+        "up_name": "蒸気火鸡",
+        "duration": 176,
+        "play_num": 799588,
+        "like_num": 11755,
+        "coin_num": 0,
+        "favorite_num": 0,
+        "tags": [
+          "DeepSeek 教程",
+          "模型教程"
+        ],
+        "category": "模型教程",
+        "hot_score": 917138,
+        "url": "https://www.bilibili.com/video/BV1fDAJenEdE",
+        "created_at": "2026-04-07T01:08:46.712344"
+      }
+    ]
+  }
 }

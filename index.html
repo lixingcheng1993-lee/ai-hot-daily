@@ -98,56 +98,27 @@
         }
         .nav-tab:hover {
             color: white;
-            background-color: rgba(255, 255, 255, 0.2);
+            background-color: rgba(255,255,255,0.2);
         }
         .nav-tab.active {
-            background-color: rgba(255, 255, 255, 0.25);
-            font-weight: 600;
-        }
-        /* 图片懒加载动画 */
-        img {
-            transition: opacity 0.3s ease;
-        }
-        img.lazy {
-            opacity: 0;
-        }
-        img.lazy.loaded {
-            opacity: 1;
-        }
-        .play-overlay {
-            transition: all 0.2s ease;
-            opacity: 0;
-            background: rgba(0, 0, 0, 0.5);
-        }
-        .video-card:hover .play-overlay {
-            opacity: 1;
+            background-color: rgba(255,255,255,0.25);
         }
     </style>
 </head>
 <body>
     <!-- Header -->
-    <header class="gradient-bg text-white sticky top-0 z-50 shadow-lg">
-        <div class="container mx-auto px-4 py-4">
-            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
-                <div>
-                    <div class="flex items-center gap-4">
-                        <h1 class="text-2xl md:text-3xl font-bold">AI热点日报</h1>
-                        <div class="flex bg-white/15 rounded-lg p-1">
-                            <button class="nav-tab active px-3 py-1 rounded-md text-sm" data-route="hot">🔥 热点</button>
-                            <button class="nav-tab px-3 py-1 rounded-md text-sm" data-route="learning">📚 AI学习</button>
-                        </div>
-                    </div>
-                    <p class="text-blue-100 text-sm md:text-base mt-1" id="date-display">加载中...</p>
-                </div>
-                <div class="flex flex-col sm:flex-row gap-2">
-                    <input 
-                        type="search" 
-                        id="search-input" 
-                        placeholder="搜索..." 
-                        class="px-4 py-2 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-300 w-full sm:w-64"
-                    >
-                </div>
+    <header class="gradient-bg text-white shadow-sm">
+        <div class="container mx-auto px-4 py-6">
+            <div class="text-center">
+                <h1 class="text-3xl md:text-4xl font-bold mb-2">AI热点日报</h1>
+                <p class="opacity-90">每日自动更新 · 聚合多源AI热点与教程</p>
             </div>
+            <!-- Navigation Tabs -->
+            <div class="flex justify-center gap-2 mt-6">
+                <button class="nav-tab active px-4 py-2 rounded-full font-medium" data-route="hot">🔥 热点日报</button>
+                <button class="nav-tab px-4 py-2 rounded-full font-medium" data-route="learning">📚 AI学习</button>
+            </div>
+            <div class="text-sm opacity-80 mt-2" id="date-display"></div>
         </div>
     </header>
 
@@ -182,6 +153,9 @@
                         </h3>
                         <div id="tag-cloud" class="tag-cloud flex flex-wrap gap-2">
                             <!-- 动态加载标签云 -->
+                        </div>
+                        <div class="mt-4">
+                            <input type="text" id="search-input" placeholder="搜索热点..." class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
                         </div>
                     </div>
                 </aside>
@@ -228,7 +202,7 @@
                     </div>
 
                     <!-- Load More / Loading -->
-                    <div id="loading" class="text-center py-10 hidden">
+                    <div id="loading" class="text-center py-10">
                         <div class="inline-block w-8 h-8 border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin"></div>
                         <p class="text-gray-500 mt-2">加载更多...</p>
                     </div>
@@ -298,6 +272,6 @@
         </div>
     </footer>
 
-    <script src="app.js?v=2"></script>
+    <script src="app.js?v=4"></script>
 </body>
 </html>

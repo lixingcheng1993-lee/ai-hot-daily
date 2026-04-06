@@ -49,10 +49,10 @@ async function init() {
  * 加载数据JSON
  */
 async function loadData() {
-    // 构建数据路径，开发环境和生产环境适配
+    // 构建数据路径，开发环境和生产环境自适应
     const dataPath = window.location.hostname === 'localhost' 
         ? '../data/daily.json' 
-        : '/ai-hot-daily/data/daily.json';
+        : './data/daily.json';
     
     const response = await fetch(dataPath);
     if (!response.ok) {

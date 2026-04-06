@@ -44,7 +44,7 @@ def main():
     print(f"\n所有爬虫完成，共抓取 {len(all_items)} 条记录")
     
     # 保存数据
-    output_path = Path(__file__).parent.parent / 'data' / 'daily.json'
+    output_path = Path(__file__).parent.parent / 'frontend' / 'data' / 'daily.json'
     save_data(all_items, output_path)
     
     print("\n爬取完成！")

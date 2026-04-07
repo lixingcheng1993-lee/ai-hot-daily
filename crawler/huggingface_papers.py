@@ -59,16 +59,28 @@ class HuggingFacePapersCrawler(BaseCrawler):
                 categories = paper_data.get('categories', [])
                 category = categories[0] if categories else '论文'
                 
+                category_cn = self._map_category(category)
+                
+                # 生成中文总结
+                if summary:
+                    # 截断过长的摘要
+                    short_summary = summary[:200] + '...' if len(summary) > 200 else summary
+                    summary_cn = f"这是HuggingFace每日热点论文，作者: {author_str}。{short_summary}"
+                else:
+                    summary_cn = f"这是一篇发表在arXiv上的AI相关论文: {title}"
+                
                 item = {
                     'title': title,
                     'url': url,
                     'description': summary,
+                    'summary_cn': summary_cn,
                     'likes': likes,
                     'comments': comments,
                     'source': 'HuggingFace Papers',
-                    'category': self._map_category(category),
+                    'category': category_cn,
                     'created_at': created_at,
-                    'author': author_str
+                    'author': author_str,
+                    'tags': ['论文', category_cn.lower()]
                 }
                 
                 items.append(item)

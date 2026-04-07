@@ -11,11 +11,18 @@ from .base import BaseCrawler
 from .utils import fetch_with_retry
 
 class GitHubTrendingCrawler(BaseCrawler):
-    """GitHub Trending 热门仓库爬虫"""
-    
     @property
     def name(self) -> str:
         return 'github_trending'
+    
+    # 中文描述模板
+    DESCRIPTION_TEMPLATES = {
+        '大语言模型': '这是一个GitHub上热门的大语言模型开源项目，目前获得 {stars} 星标。{desc}',
+        'AI工具': '这是一个实用的AI开发工具开源项目，帮助开发者更便捷地构建AI应用，目前有 {stars} 星标。{desc}',
+        '生成式AI': '这是一个生成式AI相关开源项目，当前在GitHub上获得 {stars} 星标。{desc}',
+        '深度学习': '这是一个深度学习框架或研究项目，获得 {stars} 开发者星标。{desc}',
+        '数据集': '这是一个开源AI数据集，供研究者训练模型使用，目前在GitHub上有 {stars} 星标。{desc}',
+    }
     
     def fetch(self) -> List[Dict[str, Any]]:
         url = 'https://github.com/trending?since=daily'
@@ -53,22 +60,37 @@ class GitHubTrendingCrawler(BaseCrawler):
                 
                 # 判断是否是AI相关项目
                 keywords = ['ai', 'machine-learning', 'deep-learning', 'llm', 'gpt', 'model', 'neural', 
-                           'transformer', 'diffusion', 'chatbot', 'agi', 'generative']
-                is_ai = any(k.lower() in (full_name + description).lower() for k in keywords)
+                           'transformer', 'diffusion', 'chatbot', 'agi', 'generative', 'kimi', 'deepseek', 'qwen', 'gemma', 'ollama']
+                text_to_check = (full_name + description).lower()
+                is_ai = any(k.lower() in text_to_check for k in keywords)
                 if not is_ai:
                     continue
+                
+                category = self._classify(full_name + description)
+                
+                # 生成中文总结
+                template = self.DESCRIPTION_TEMPLATES.get(category, self.DESCRIPTION_TEMPLATES['AI工具'])
+                summary_cn = template.format(stars=stars, desc=description)
+                
+                # 提取标签
+                tags = []
+                if language:
+                    tags.append(language.lower())
+                tags.append(category.lower())
                 
                 item = {
                     'title': full_name,
                     'url': repo_url,
                     'description': description,
+                    'summary_cn': summary_cn,
                     'likes': stars,
                     'forks': forks,
                     'language': language,
                     'source': 'GitHub Trending',
-                    'category': self._classify(full_name + description),
-                    'created_at': None,  # GitHub Trending 不提供今日创建时间
-                    'author': full_name.split('/')[0]
+                    'category': category,
+                    'created_at': None,
+                    'author': full_name.split('/')[0],
+                    'tags': tags
                 }
                 
                 items.append(item)
@@ -95,12 +117,14 @@ class GitHubTrendingCrawler(BaseCrawler):
     def _classify(self, text: str) -> str:
         """简单分类"""
         text = text.lower()
-        if any(w in text for w in ['llm', 'large-language', 'gpt', 'chat', 'llama']):
+        if any(w in text for w in ['llm', 'large-language', 'gpt', 'chat', 'llama', 'qwen', 'gemma', 'kimi', 'deepseek', 'ollama']):
             return '大语言模型'
-        if any(w in text for w in ['diffusion', 'stable-diffusion', 'image', 'generative']):
+        if any(w in text for w in ['diffusion', 'stable-diffusion', 'image', 'generative', 'midjourney', 'sdxl']):
             return '生成式AI'
-        if any(w in text for w in ['deep-learning', 'neural', 'transformer']):
+        if any(w in text for w in ['deep-learning', 'neural', 'transformer', 'pytorch', 'tensorflow']):
             return '深度学习'
-        if any(w in text for w in ['dataset', 'data']):
+        if any(w in text for w in ['dataset', 'data', 'benchmark']):
             return '数据集'
+        if any(w in text for w in ['agent', 'autogpt', 'langchain']):
+            return 'AI Agent'
         return 'AI工具'

@@ -400,7 +400,7 @@ function createFocusCard(item, index) {
  * 初始化今日速读
  */
 function initQuickRead() {
-    // 所有热点都放速读里
+    // 所有热点都放速读里，按热度排序
     const allItems = AppState.allHotItems.slice().sort(function(a, b) {
         return (b.hot_score || 0) - (a.hot_score || 0);
     });
@@ -409,10 +409,16 @@ function initQuickRead() {
     allItems.forEach(function(item) {
         const div = document.createElement('div');
         div.className = 'quick-read-item px-4 py-3';
+        const date = item.date ? '<span class="inline-block px-1.5 py-0.5 bg-green-50 text-green-600 text-xs rounded ml-1">' + item.date + '</span>' : '';
+        const desc = item.summary_cn || item.description || '';
+        
         div.innerHTML = '<a href="' + escapeHtml(item.url) + '" target="_blank" class="flex items-start justify-between gap-3 group">' +
             '<div class="flex-1">' +
-                '<div class="font-medium text-gray-900 group-hover:text-blue-600">' + escapeHtml(item.title) + '</div>' +
-                (item.description ? '<div class="text-sm text-gray-500 mt-1 text-line-clamp-1">' + escapeHtml(item.description) + '</div>' : '') +
+                '<div class="font-medium text-gray-900 group-hover:text-blue-600">' + 
+                    escapeHtml(item.title) + 
+                    date +
+                '</div>' +
+                (desc ? '<div class="text-sm text-gray-500 mt-1 text-line-clamp-1">' + escapeHtml(desc) + '</div>' : '') +
             '</div>' +
             '<span class="inline-block px-2 py-1 bg-gray-100 text-gray-500 text-xs rounded whitespace-nowrap">' +
                 escapeHtml(item.source) +
@@ -583,15 +589,19 @@ function renderHotCard(item) {
     const category = item.category || '其他';
     const categoryDisplay = Array.isArray(category) ? category[0] : category;
     const description = item.description || '';
+    const summaryCn = item.summary_cn || ''; // 中文总结
+    const date = item.date || ''; // 发布日期
 
     const card = document.createElement('div');
     card.className = 'hot-card bg-white rounded-xl p-5 overflow-hidden';
-    card.innerHTML = '<div class="flex justify-between items-start gap-4 mb-3">' +
-            '<div>' +
+    
+    let content = '<div class="flex justify-between items-start gap-4 mb-3">' +
+            '<div class="flex flex-wrap gap-1">' +
                 '<span class="inline-block px-2 py-1 bg-blue-50 text-blue-600 text-xs rounded">' +
                     escapeHtml(item.source || '未知') +
                 '</span>' +
-                (categoryDisplay ? '<span class="inline-block px-2 py-1 bg-gray-100 text-gray-500 text-xs rounded ml-1">' + escapeHtml(categoryDisplay) + '</span>' : '') +
+                (categoryDisplay ? '<span class="inline-block px-2 py-1 bg-gray-100 text-gray-500 text-xs rounded">' + escapeHtml(categoryDisplay) + '</span>' : '') +
+                (date ? '<span class="inline-block px-2 py-1 bg-green-50 text-green-600 text-xs rounded">' + date + '</span>' : '') +
             '</div>' +
             '<div class="flex items-center gap-1">' +
                 '<span class="text-lg font-bold hot-score">' + Math.round(hotScore) + '</span>' +
@@ -600,11 +610,19 @@ function renderHotCard(item) {
                 '</svg>' +
             '</div>' +
         '</div>' +
-        '<h3 class="text-xl font-bold text-gray-900 mb-2">' +
+        '<h3 class="text-xl font-bold text-gray-900 mb-3">' +
             '<a href="' + escapeHtml(item.url) + '" target="_blank" class="hover:text-blue-600">' + escapeHtml(item.title) + '</a>' +
-        '</h3>' +
-        (description ? '<p class="text-gray-600 text-line-clamp-2 mb-0">' + escapeHtml(description) + '</p>' : '') +
-    '</div>';
+        '</h3>';
+    
+    // 优先显示中文总结，如果没有则显示原描述
+    if (summaryCn && summaryCn.trim()) {
+        content += '<div class="text-gray-700 text-line-clamp-3 leading-relaxed">' + escapeHtml(summaryCn) + '</div>';
+    } else if (description && description.trim()) {
+        content += '<p class="text-gray-600 text-line-clamp-2 leading-relaxed">' + escapeHtml(description) + '</p>';
+    }
+    
+    content += '</div>';
+    card.innerHTML = content;
 
     return card;
 }
@@ -792,17 +810,23 @@ function createLearningVideoCard(item) {
     card.target = '_blank';
     card.className = 'hot-card bg-white rounded-xl overflow-hidden fade-in';
 
+    // 兼容不同字段名
+    const coverUrl = item.cover_url || item.cover || '';
+    const playNum = item.play_num || item.play || 0;
+    const likeNum = item.like_num || item.like || 0;
+    const upName = item.up_name || item.author || '';
+
     card.innerHTML = '<div class="relative aspect-video bg-gray-100">' +
-            '<img data-src="' + item.cover + '" alt="' + escapeHtml(item.title) + '" class="w-full h-full object-cover lazy">' +
+            '<img data-src="' + escapeHtml(coverUrl) + '" alt="' + escapeHtml(item.title) + '" class="w-full h-full object-cover lazy">' +
             '<div class="absolute bottom-2 right-2 bg-black/70 text-white px-2 py-1 rounded text-sm">' +
-                formatNumber(item.play) + ' 播放' +
+                formatNumber(playNum) + ' 播放' +
             '</div>' +
         '</div>' +
         '<div class="p-4">' +
             '<h3 class="font-semibold text-gray-900 mb-2 line-clamp-2">' + escapeHtml(item.title) + '</h3>' +
             '<div class="flex justify-between items-center text-sm text-gray-500">' +
-                '<span>' + escapeHtml(item.author) + '</span>' +
-                '<span>' + formatNumber(item.like) + ' 👍</span>' +
+                '<span>' + escapeHtml(upName) + '</span>' +
+                '<span>' + formatNumber(likeNum) + ' 👍</span>' +
             '</div>' +
             '<div class="mt-2">' +
                 '<span class="inline-block px-2 py-1 bg-blue-50 text-blue-600 text-xs rounded">' +

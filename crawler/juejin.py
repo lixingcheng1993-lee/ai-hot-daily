@@ -145,6 +145,7 @@ class JuejinCrawler(BaseCrawler):
                 'title': title,
                 'url': article_url,
                 'description': description,
+                'summary_cn': f"这是掘金上一篇热门AI技术文章：{description}",
                 'author': author,
                 'source': '掘金',
                 'category': category,
@@ -153,7 +154,7 @@ class JuejinCrawler(BaseCrawler):
                 'image_url': cover_image,
                 'hot_score': hot_score,
                 'created_at': created_at,
-                'tags': ['中文', '掘金', category],
+                'tags': ['中文', '掘金', category.lower()],
                 'is_chinese': True,
             }
             

@@ -57,17 +57,26 @@ class ZhihuHotCrawler(BaseCrawler):
                 # 中文内容加权（知乎都是中文，乘以 1.2 让排名更靠前）
                 hot_score = hot_score * 1.2
                 
+                category = self._classify(text)
+                
+                # 生成中文总结
+                if excerpt:
+                    summary_cn = f"这是知乎热榜上讨论度很高的AI相关问题：{excerpt}"
+                else:
+                    summary_cn = f"这是知乎热榜上热度 {int(hot_score)} 的热门讨论：{title}"
+                
                 item = {
                     'title': title,
                     'url': url,
                     'description': excerpt,
+                    'summary_cn': summary_cn,
                     'likes': hot_score,
                     'comments': target.get('comment_count', 0),
                     'source': '知乎热榜',
-                    'category': self._classify(text),
+                    'category': category,
                     'created_at': None,
                     'author': '',
-                    'tags': ['中文', '知乎', self._classify(text)],
+                    'tags': ['中文', '知乎', category.lower()],
                     'is_chinese': True,
                     'hot_score': hot_score
                 }

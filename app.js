@@ -330,7 +330,8 @@ function createFocusCard(item, index) {
     const hotScore = item.hot_score || 0;
     const category = item.category || '其他';
     const categoryDisplay = Array.isArray(category) ? category[0] : category;
-    const description = item.description || '';
+    // 优先使用中文总结
+    const content = item.summary_cn || item.description || '';
     const author = item.author || '';
     const imageUrl = item.image_url;
 
@@ -339,17 +340,14 @@ function createFocusCard(item, index) {
     card.target = '_blank';
     card.className = 'focus-card bg-white rounded-xl overflow-hidden block fade-in';
 
-    // 根据位置决定布局
-    const isFirst = index === 0;
-    const layoutClass = isFirst ? 'grid grid-cols-1 md:grid-cols-2' : 'grid grid-cols-1';
-
+    // 所有焦点卡片统一布局，高度适中
     let imageHtml = '';
     if (imageUrl) {
-        imageHtml = '<div class="relative ' + (isFirst ? 'h-64 md:h-full' : 'h-48') + ' bg-gray-100 overflow-hidden">' +
+        imageHtml = '<div class="relative h-48 bg-gray-100 overflow-hidden">' +
             '<img data-src="' + escapeHtml(imageUrl) + '" alt="' + escapeHtml(item.title) + '" class="w-full h-full object-cover lazy">' +
             '<div class="absolute top-3 left-3">' +
             '<span class="px-3 py-1 bg-black/60 text-white text-sm font-semibold rounded-full">' +
-            (index === 0 ? '🔥 今日头条' : '焦点 ' + (index + 1)) +
+            (index === 0 ? '🔥 今日焦点' : '焦点 ' + (index + 1)) +
             '</span>' +
             '</div>' +
             '</div>';
@@ -361,7 +359,7 @@ function createFocusCard(item, index) {
         imageHtml = '<div class="h-48 bg-gradient-to-br from-[hsl(' + hue1 + ',80%,60%)] to-[hsl(' + hue2 + ',80%,50%)] relative">' +
             '<div class="absolute top-3 left-3">' +
             '<span class="px-3 py-1 bg-black/40 text-white text-sm font-semibold rounded-full">' +
-            (index === 0 ? '🔥 今日头条' : '焦点 ' + (index + 1)) +
+            (index === 0 ? '🔥 今日焦点' : '焦点 ' + (index + 1)) +
             '</span>' +
             '</div>' +
             '<div class="absolute bottom-4 left-4 text-white">' +
@@ -371,14 +369,15 @@ function createFocusCard(item, index) {
             '</div>';
     }
 
-    card.innerHTML = '<div class="' + layoutClass + '">' +
+    card.innerHTML = '<div class="grid grid-cols-1">' +
         imageHtml +
-        '<div class="p-6">' +
-            '<div class="flex justify-between items-start gap-3 mb-3">' +
+        '<div class="p-5">' +
+            '<div class="flex flex-wrap justify-between items-start gap-2 mb-3">' +
                 '<div>' +
                     '<span class="inline-block px-2 py-1 bg-blue-50 text-blue-600 text-xs rounded">' +
                         escapeHtml(item.source || '未知') +
                     '</span>' +
+                    (item.date ? '<span class="inline-block px-2 py-1 bg-green-50 text-green-600 text-xs rounded ml-1">' + item.date + '</span>' : '') +
                     (categoryDisplay ? '<span class="inline-block px-2 py-1 bg-gray-50 text-gray-500 text-xs rounded ml-1">' + escapeHtml(categoryDisplay) + '</span>' : '') +
                 '</div>' +
                 '<div class="flex items-center gap-1">' +
@@ -388,8 +387,8 @@ function createFocusCard(item, index) {
                     '</svg>' +
                 '</div>' +
             '</div>' +
-            '<h3 class="text-xl font-bold text-gray-900 mb-2">' + escapeHtml(item.title) + '</h3>' +
-            (description ? '<p class="text-gray-600 text-line-clamp-2">' + escapeHtml(description) + '</p>' : '') +
+            '<h3 class="text-xl font-bold text-gray-900 mb-3">' + escapeHtml(item.title) + '</h3>' +
+            (content ? '<p class="text-gray-600 text-line-clamp-3 leading-relaxed">' + escapeHtml(content) + '</p>' : '') +
         '</div>' +
     '</div>';
 
@@ -840,6 +839,18 @@ function createLearningVideoCard(item) {
 }
 
 /**
+ *  Fisher-Yates 洗牌算法打乱数组
+ */
+function shuffleArray(array) {
+    const newArray = array.slice();
+    for (let i = newArray.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+    }
+    return newArray;
+}
+
+/**
  * 设置学习视频事件监听
  */
 function setupLearningEventListeners() {
@@ -853,6 +864,15 @@ function setupLearningEventListeners() {
 
         AppState.learningCurrentCategory = e.target.dataset.category;
         reRenderLearning();
+    });
+    
+    // 换一批按钮 - 打乱视频顺序重新渲染
+    document.getElementById('shuffle-learning').addEventListener('click', function() {
+        // 重新打乱原始数据
+        AppState.allLearningVideos = shuffleArray(AppState.allLearningVideos);
+        reRenderLearning();
+        // 滚动到顶部
+        window.scrollTo({top: 0, behavior: 'smooth'});
     });
 }
 

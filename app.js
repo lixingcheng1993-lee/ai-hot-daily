@@ -211,7 +211,15 @@ function setupRouting() {
                 elements.hotView.classList.add('hidden');
                 elements.learningView.classList.remove('hidden');
                 // 第一次进入学习页面才初始化，保证只渲染一次
-                if (AppState.allLearningVideos.length > 0 && elements.videoGrid.children.length === 0) {
+                // 检查是否已经渲染过：没有子元素或者只有空白文本节点
+                let hasRendered = false;
+                for (let i = 0; i < elements.videoGrid.children.length; i++) {
+                    if (elements.videoGrid.children[i].nodeType === 1) { // 元素节点
+                        hasRendered = true;
+                        break;
+                    }
+                }
+                if (AppState.allLearningVideos.length > 0 && !hasRendered) {
                     console.log('initLearningView first time');
                     initLearningView();
                 }

@@ -177,12 +177,17 @@ class BilibiliAICrawler(BaseCrawler):
             
             display_category = self.CATEGORY_MAP.get(category, category)
             
+            # 修复封面URL，添加https前缀
+            cover_url = video.get('pic', '')
+            if cover_url.startswith('//'):
+                cover_url = 'https:' + cover_url
+            
             processed = {
                 'id': bvid,
                 'bvid': bvid,
                 'title': video.get('title', ''),
                 'description': video.get('description', ''),
-                'cover_url': video.get('pic', ''),
+                'cover_url': cover_url,
                 'up_name': video.get('author', ''),
                 'duration': duration,
                 'play_num': play_num,
